@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<!-- saved from url=(0078)https://interactive.guim.co.uk/charts/embed/may/2018-05-01T13:55:37/embed.html -->
+<html style="overflow: hidden;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <style>
+        @font-face {
+          font-family: "Guardian Agate Sans 1 Web";
+          src: url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianAgateSans1Web/GuardianAgateSans1Web-Regular.eot");
+          src: url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianAgateSans1Web/GuardianAgateSans1Web-Regular.eot?#iefix") format("embedded-opentype"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianAgateSans1Web/GuardianAgateSans1Web-Regular.woff2") format("woff2"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianAgateSans1Web/GuardianAgateSans1Web-Regular.woff") format("woff"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianAgateSans1Web/GuardianAgateSans1Web-Regular.ttf") format("truetype"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianAgateSans1Web/GuardianAgateSans1Web-Regular.svg#GuardianAgateSans1Web-Regular") format("svg");
+          font-weight: 400;
+          font-style: normal;
+          font-stretch: normal;
+        }
+
+        @font-face {
+          font-family: "Guardian Agate Sans 1 Web";
+          src: url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianAgateSans1Web/GuardianAgateSans1Web-RegularItalic.eot");
+          src: url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianAgateSans1Web/GuardianAgateSans1Web-RegularItalic.eot?#iefix") format("embedded-opentype"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianAgateSans1Web/GuardianAgateSans1Web-RegularItalic.woff2") format("woff2"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianAgateSans1Web/GuardianAgateSans1Web-RegularItalic.woff") format("woff"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianAgateSans1Web/GuardianAgateSans1Web-RegularItalic.ttf") format("truetype"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianAgateSans1Web/GuardianAgateSans1Web-RegularItalic.svg#GuardianAgateSans1Web-RegularItalic") format("svg");
+          font-weight: 400;
+          font-style: italic;
+          font-stretch: normal;
+        }
+
+        @font-face {
+          font-family: "Guardian Agate Sans 1 Web";
+          src: url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianAgateSans1Web/GuardianAgateSans1Web-Bold.eot");
+          src: url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianAgateSans1Web/GuardianAgateSans1Web-Bold.eot?#iefix") format("embedded-opentype"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianAgateSans1Web/GuardianAgateSans1Web-Bold.woff2") format("woff2"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianAgateSans1Web/GuardianAgateSans1Web-Bold.woff") format("woff"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianAgateSans1Web/GuardianAgateSans1Web-Bold.ttf") format("truetype"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianAgateSans1Web/GuardianAgateSans1Web-Bold.svg#GuardianAgateSans1Web-Bold") format("svg");
+          font-weight: 700;
+          font-style: normal;
+          font-stretch: normal;
+        }
+
+        @font-face {
+          font-family: "Guardian Agate Sans 1 Web";
+          src: url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianAgateSans1Web/GuardianAgateSans1Web-BoldItalic.eot");
+          src: url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianAgateSans1Web/GuardianAgateSans1Web-BoldItalic.eot?#iefix") format("embedded-opentype"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianAgateSans1Web/GuardianAgateSans1Web-BoldItalic.woff2") format("woff2"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianAgateSans1Web/GuardianAgateSans1Web-BoldItalic.woff") format("woff"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianAgateSans1Web/GuardianAgateSans1Web-BoldItalic.ttf") format("truetype"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianAgateSans1Web/GuardianAgateSans1Web-BoldItalic.svg#GuardianAgateSans1Web-BoldItalic") format("svg");
+          font-weight: 700;
+          font-style: italic;
+          font-stretch: normal;
+        }
+
+        @font-face {
+          font-family: "Guardian Egyptian Web";
+          src: url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianEgyptianWeb/GuardianEgyptianWeb-Light.eot");
+          src: url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianEgyptianWeb/GuardianEgyptianWeb-Light.eot?#iefix") format("embedded-opentype"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianEgyptianWeb/GuardianEgyptianWeb-Light.woff2") format("woff2"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianEgyptianWeb/GuardianEgyptianWeb-Light.woff") format("woff"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianEgyptianWeb/GuardianEgyptianWeb-Light.ttf") format("truetype"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianEgyptianWeb/GuardianEgyptianWeb-Light.svg#GuardianEgyptianWeb-Light") format("svg");
+          font-weight: 200;
+          font-style: normal;
+          font-stretch: normal;
+        }
+
+        @font-face {
+          font-family: "Guardian Egyptian Web";
+          src: url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianEgyptianWeb/GuardianEgyptianWeb-Regular.eot");
+          src: url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianEgyptianWeb/GuardianEgyptianWeb-Regular.eot?#iefix") format("embedded-opentype"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianEgyptianWeb/GuardianEgyptianWeb-Regular.woff2") format("woff2"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianEgyptianWeb/GuardianEgyptianWeb-Regular.woff") format("woff"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianEgyptianWeb/GuardianEgyptianWeb-Regular.ttf") format("truetype"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianEgyptianWeb/GuardianEgyptianWeb-Regular.svg#GuardianEgyptianWeb-Regular") format("svg");
+          font-weight: 400;
+          font-style: normal;
+          font-stretch: normal;
+        }
+
+        @font-face {
+          font-family: "Guardian Egyptian Web";
+          src: url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianEgyptianWeb/GuardianEgyptianWeb-RegularItalic.eot");
+          src: url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianEgyptianWeb/GuardianEgyptianWeb-RegularItalic.eot?#iefix") format("embedded-opentype"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianEgyptianWeb/GuardianEgyptianWeb-RegularItalic.woff2") format("woff2"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianEgyptianWeb/GuardianEgyptianWeb-RegularItalic.woff") format("woff"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianEgyptianWeb/GuardianEgyptianWeb-RegularItalic.ttf") format("truetype"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianEgyptianWeb/GuardianEgyptianWeb-RegularItalic.svg#GuardianEgyptianWeb-RegularItalic") format("svg");
+          font-weight: 400;
+          font-style: italic;
+          font-stretch: normal;
+        }
+
+        @font-face {
+          font-family: "Guardian Egyptian Web";
+          src: url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianEgyptianWeb/GuardianEgyptianWeb-Semibold.eot");
+          src: url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianEgyptianWeb/GuardianEgyptianWeb-Semibold.eot?#iefix") format("embedded-opentype"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianEgyptianWeb/GuardianEgyptianWeb-Semibold.woff2") format("woff2"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianEgyptianWeb/GuardianEgyptianWeb-Semibold.woff") format("woff"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianEgyptianWeb/GuardianEgyptianWeb-Semibold.ttf") format("truetype"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianEgyptianWeb/GuardianEgyptianWeb-Semibold.svg#GuardianEgyptianWeb-Semibold") format("svg");
+          font-weight: 600;
+          font-style: normal;
+          font-stretch: normal;
+        }
+
+        @font-face {
+          font-family: "Guardian Egyptian Web";
+          src: url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianEgyptianWeb/GuardianEgyptianWeb-SemiboldItalic.eot");
+          src: url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianEgyptianWeb/GuardianEgyptianWeb-SemiboldItalic.eot?#iefix") format("embedded-opentype"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianEgyptianWeb/GuardianEgyptianWeb-SemiboldItalic.woff2") format("woff2"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianEgyptianWeb/GuardianEgyptianWeb-SemiboldItalic.woff") format("woff"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianEgyptianWeb/GuardianEgyptianWeb-SemiboldItalic.ttf") format("truetype"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianEgyptianWeb/GuardianEgyptianWeb-SemiboldItalic.svg#GuardianEgyptianWeb-SemiboldItalic") format("svg");
+          font-weight: 600;
+          font-style: italic;
+          font-stretch: normal;
+        }
+
+        @font-face {
+          font-family: "Guardian Egyptian Web";
+          src: url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianEgyptianWeb/GuardianEgyptianWeb-Medium.eot");
+          src: url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianEgyptianWeb/GuardianEgyptianWeb-Medium.eot?#iefix") format("embedded-opentype"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianEgyptianWeb/GuardianEgyptianWeb-Medium.woff2") format("woff2"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianEgyptianWeb/GuardianEgyptianWeb-Medium.woff") format("woff"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianEgyptianWeb/GuardianEgyptianWeb-Medium.ttf") format("truetype"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianEgyptianWeb/GuardianEgyptianWeb-Medium.svg#GuardianEgyptianWeb-Medium") format("svg");
+          font-weight: 500;
+          font-style: normal;
+          font-stretch: normal;
+        }
+
+        @font-face {
+          font-family: "Guardian Egyptian Web";
+          src: url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianEgyptianWeb/GuardianEgyptianWeb-Bold.eot");
+          src: url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianEgyptianWeb/GuardianEgyptianWeb-Bold.eot?#iefix") format("embedded-opentype"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianEgyptianWeb/GuardianEgyptianWeb-Bold.woff2") format("woff2"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianEgyptianWeb/GuardianEgyptianWeb-Bold.woff") format("woff"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianEgyptianWeb/GuardianEgyptianWeb-Bold.ttf") format("truetype"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianEgyptianWeb/GuardianEgyptianWeb-Bold.svg#GuardianEgyptianWeb-Bold") format("svg");
+          font-weight: 700;
+          font-style: normal;
+          font-stretch: normal;
+        }
+
+        @font-face {
+          font-family: "Guardian Egyptian Web";
+          src: url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianEgyptianWeb/GuardianEgyptianWeb-BoldItalic.eot");
+          src: url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianEgyptianWeb/GuardianEgyptianWeb-BoldItalic.eot?#iefix") format("embedded-opentype"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianEgyptianWeb/GuardianEgyptianWeb-BoldItalic.woff2") format("woff2"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianEgyptianWeb/GuardianEgyptianWeb-BoldItalic.woff") format("woff"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianEgyptianWeb/GuardianEgyptianWeb-BoldItalic.ttf") format("truetype"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianEgyptianWeb/GuardianEgyptianWeb-BoldItalic.svg#GuardianEgyptianWeb-BoldItalic") format("svg");
+          font-weight: 700;
+          font-style: italic;
+          font-stretch: normal;
+        }
+
+        @font-face {
+          font-family: "Guardian Sans Web";
+          src: url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianSansWeb/GuardianSansWeb-Light.eot");
+          src: url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianSansWeb/GuardianSansWeb-Light.eot?#iefix") format("embedded-opentype"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianSansWeb/GuardianSansWeb-Light.woff2") format("woff2"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianSansWeb/GuardianSansWeb-Light.woff") format("woff"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianSansWeb/GuardianSansWeb-Light.ttf") format("truetype"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianSansWeb/GuardianSansWeb-Light.svg#GuardianSansWeb-Light") format("svg");
+          font-weight: 200;
+          font-style: normal;
+          font-stretch: normal;
+        }
+
+        @font-face {
+          font-family: "Guardian Sans Web";
+          src: url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianSansWeb/GuardianSansWeb-Regular.eot");
+          src: url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianSansWeb/GuardianSansWeb-Regular.eot?#iefix") format("embedded-opentype"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianSansWeb/GuardianSansWeb-Regular.woff2") format("woff2"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianSansWeb/GuardianSansWeb-Regular.woff") format("woff"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianSansWeb/GuardianSansWeb-Regular.ttf") format("truetype"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianSansWeb/GuardianSansWeb-Regular.svg#GuardianSansWeb-Regular") format("svg");
+          font-weight: 400;
+          font-style: normal;
+          font-stretch: normal;
+        }
+
+        @font-face {
+          font-family: "Guardian Sans Web";
+          src: url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianSansWeb/GuardianSansWeb-Semibold.eot");
+          src: url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianSansWeb/GuardianSansWeb-Semibold.eot?#iefix") format("embedded-opentype"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianSansWeb/GuardianSansWeb-Semibold.woff2") format("woff2"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianSansWeb/GuardianSansWeb-Semibold.woff") format("woff"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianSansWeb/GuardianSansWeb-Semibold.ttf") format("truetype"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianSansWeb/GuardianSansWeb-Semibold.svg#GuardianSansWeb-Semibold") format("svg");
+          font-weight: 600;
+          font-style: normal;
+          font-stretch: normal;
+        }
+
+        @font-face {
+          font-family: "Guardian Text Egyptian Web";
+          src: url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextEgyptianWeb/GuardianTextEgyptianWeb-Regular.eot");
+          src: url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextEgyptianWeb/GuardianTextEgyptianWeb-Regular.eot?#iefix") format("embedded-opentype"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextEgyptianWeb/GuardianTextEgyptianWeb-Regular.woff2") format("woff2"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextEgyptianWeb/GuardianTextEgyptianWeb-Regular.woff") format("woff"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextEgyptianWeb/GuardianTextEgyptianWeb-Regular.ttf") format("truetype"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextEgyptianWeb/GuardianTextEgyptianWeb-Regular.svg#GuardianTextEgyptianWeb-Regular") format("svg");
+          font-weight: 400;
+          font-style: normal;
+          font-stretch: normal;
+        }
+
+        @font-face {
+          font-family: "Guardian Text Egyptian Web";
+          src: url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextEgyptianWeb/GuardianTextEgyptianWeb-RegularItalic.eot");
+          src: url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextEgyptianWeb/GuardianTextEgyptianWeb-RegularItalic.eot?#iefix") format("embedded-opentype"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextEgyptianWeb/GuardianTextEgyptianWeb-RegularItalic.woff2") format("woff2"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextEgyptianWeb/GuardianTextEgyptianWeb-RegularItalic.woff") format("woff"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextEgyptianWeb/GuardianTextEgyptianWeb-RegularItalic.ttf") format("truetype"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextEgyptianWeb/GuardianTextEgyptianWeb-RegularItalic.svg#GuardianTextEgyptianWeb-RegularItalic") format("svg");
+          font-weight: 400;
+          font-style: italic;
+          font-stretch: normal;
+        }
+
+        @font-face {
+          font-family: "Guardian Text Egyptian Web";
+          src: url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextEgyptianWeb/GuardianTextEgyptianWeb-Medium.eot");
+          src: url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextEgyptianWeb/GuardianTextEgyptianWeb-Medium.eot?#iefix") format("embedded-opentype"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextEgyptianWeb/GuardianTextEgyptianWeb-Medium.woff2") format("woff2"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextEgyptianWeb/GuardianTextEgyptianWeb-Medium.woff") format("woff"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextEgyptianWeb/GuardianTextEgyptianWeb-Medium.ttf") format("truetype"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextEgyptianWeb/GuardianTextEgyptianWeb-Medium.svg#GuardianTextEgyptianWeb-Medium") format("svg");
+          font-weight: 500;
+          font-style: normal;
+          font-stretch: normal;
+        }
+
+        @font-face {
+          font-family: "Guardian Text Egyptian Web";
+          src: url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextEgyptianWeb/GuardianTextEgyptianWeb-MediumItalic.eot");
+          src: url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextEgyptianWeb/GuardianTextEgyptianWeb-MediumItalic.eot?#iefix") format("embedded-opentype"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextEgyptianWeb/GuardianTextEgyptianWeb-MediumItalic.woff2") format("woff2"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextEgyptianWeb/GuardianTextEgyptianWeb-MediumItalic.woff") format("woff"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextEgyptianWeb/GuardianTextEgyptianWeb-MediumItalic.ttf") format("truetype"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextEgyptianWeb/GuardianTextEgyptianWeb-MediumItalic.svg#GuardianTextEgyptianWeb-MediumItalic") format("svg");
+          font-weight: 500;
+          font-style: italic;
+          font-stretch: normal;
+        }
+
+        @font-face {
+          font-family: "Guardian Text Egyptian Web";
+          src: url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextEgyptianWeb/GuardianTextEgyptianWeb-Bold.eot");
+          src: url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextEgyptianWeb/GuardianTextEgyptianWeb-Bold.eot?#iefix") format("embedded-opentype"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextEgyptianWeb/GuardianTextEgyptianWeb-Bold.woff2") format("woff2"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextEgyptianWeb/GuardianTextEgyptianWeb-Bold.woff") format("woff"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextEgyptianWeb/GuardianTextEgyptianWeb-Bold.ttf") format("truetype"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextEgyptianWeb/GuardianTextEgyptianWeb-Bold.svg#GuardianTextEgyptianWeb-Bold") format("svg");
+          font-weight: 700;
+          font-style: normal;
+          font-stretch: normal;
+        }
+
+        @font-face {
+          font-family: "Guardian Text Egyptian Web";
+          src: url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextEgyptianWeb/GuardianTextEgyptianWeb-BoldItalic.eot");
+          src: url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextEgyptianWeb/GuardianTextEgyptianWeb-BoldItalic.eot?#iefix") format("embedded-opentype"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextEgyptianWeb/GuardianTextEgyptianWeb-BoldItalic.woff2") format("woff2"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextEgyptianWeb/GuardianTextEgyptianWeb-BoldItalic.woff") format("woff"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextEgyptianWeb/GuardianTextEgyptianWeb-BoldItalic.ttf") format("truetype"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextEgyptianWeb/GuardianTextEgyptianWeb-BoldItalic.svg#GuardianTextEgyptianWeb-BoldItalic") format("svg");
+          font-weight: 700;
+          font-style: italic;
+          font-stretch: normal;
+        }
+
+        @font-face {
+          font-family: "Guardian Text Egyptian Web";
+          src: url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextEgyptianWeb/GuardianTextEgyptianWeb-Black.eot");
+          src: url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextEgyptianWeb/GuardianTextEgyptianWeb-Black.eot?#iefix") format("embedded-opentype"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextEgyptianWeb/GuardianTextEgyptianWeb-Black.woff2") format("woff2"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextEgyptianWeb/GuardianTextEgyptianWeb-Black.woff") format("woff"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextEgyptianWeb/GuardianTextEgyptianWeb-Black.ttf") format("truetype"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextEgyptianWeb/GuardianTextEgyptianWeb-Black.svg#GuardianTextEgyptianWeb-Black") format("svg");
+          font-weight: 800;
+          font-style: normal;
+          font-stretch: normal;
+        }
+
+        @font-face {
+          font-family: "Guardian Text Egyptian Web";
+          src: url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextEgyptianWeb/GuardianTextEgyptianWeb-BlackItalic.eot");
+          src: url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextEgyptianWeb/GuardianTextEgyptianWeb-BlackItalic.eot?#iefix") format("embedded-opentype"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextEgyptianWeb/GuardianTextEgyptianWeb-BlackItalic.woff2") format("woff2"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextEgyptianWeb/GuardianTextEgyptianWeb-BlackItalic.woff") format("woff"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextEgyptianWeb/GuardianTextEgyptianWeb-BlackItalic.ttf") format("truetype"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextEgyptianWeb/GuardianTextEgyptianWeb-BlackItalic.svg#GuardianTextEgyptianWeb-BlackItalic") format("svg");
+          font-weight: 800;
+          font-style: italic;
+          font-stretch: normal;
+        }
+
+        @font-face {
+          font-family: "Guardian Text Sans Web";
+          src: url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextSansWeb/GuardianTextSansWeb-Regular.eot");
+          src: url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextSansWeb/GuardianTextSansWeb-Regular.eot?#iefix") format("embedded-opentype"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextSansWeb/GuardianTextSansWeb-Regular.woff2") format("woff2"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextSansWeb/GuardianTextSansWeb-Regular.woff") format("woff"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextSansWeb/GuardianTextSansWeb-Regular.ttf") format("truetype"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextSansWeb/GuardianTextSansWeb-Regular.svg#GuardianTextSansWeb-Regular") format("svg");
+          font-weight: 400;
+          font-style: normal;
+          font-stretch: normal;
+        }
+
+        @font-face {
+          font-family: "Guardian Text Sans Web";
+          src: url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextSansWeb/GuardianTextSansWeb-RegularItalic.eot");
+          src: url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextSansWeb/GuardianTextSansWeb-RegularItalic.eot?#iefix") format("embedded-opentype"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextSansWeb/GuardianTextSansWeb-RegularItalic.woff2") format("woff2"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextSansWeb/GuardianTextSansWeb-RegularItalic.woff") format("woff"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextSansWeb/GuardianTextSansWeb-RegularItalic.ttf") format("truetype"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextSansWeb/GuardianTextSansWeb-RegularItalic.svg#GuardianTextSansWeb-RegularItalic") format("svg");
+          font-weight: 400;
+          font-style: italic;
+          font-stretch: normal;
+        }
+
+        @font-face {
+          font-family: "Guardian Text Sans Web";
+          src: url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextSansWeb/GuardianTextSansWeb-Medium.eot");
+          src: url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextSansWeb/GuardianTextSansWeb-Medium.eot?#iefix") format("embedded-opentype"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextSansWeb/GuardianTextSansWeb-Medium.woff2") format("woff2"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextSansWeb/GuardianTextSansWeb-Medium.woff") format("woff"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextSansWeb/GuardianTextSansWeb-Medium.ttf") format("truetype"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextSansWeb/GuardianTextSansWeb-Medium.svg#GuardianTextSansWeb-Medium") format("svg");
+          font-weight: 500;
+          font-style: normal;
+          font-stretch: normal;
+        }
+
+        @font-face {
+          font-family: "Guardian Text Sans Web";
+          src: url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextSansWeb/GuardianTextSansWeb-MediumItalic.eot");
+          src: url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextSansWeb/GuardianTextSansWeb-MediumItalic.eot?#iefix") format("embedded-opentype"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextSansWeb/GuardianTextSansWeb-MediumItalic.woff2") format("woff2"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextSansWeb/GuardianTextSansWeb-MediumItalic.woff") format("woff"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextSansWeb/GuardianTextSansWeb-MediumItalic.ttf") format("truetype"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextSansWeb/GuardianTextSansWeb-MediumItalic.svg#GuardianTextSansWeb-MediumItalic") format("svg");
+          font-weight: 500;
+          font-style: italic;
+          font-stretch: normal;
+        }
+
+        @font-face {
+          font-family: "Guardian Text Sans Web";
+          src: url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextSansWeb/GuardianTextSansWeb-Bold.eot");
+          src: url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextSansWeb/GuardianTextSansWeb-Bold.eot?#iefix") format("embedded-opentype"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextSansWeb/GuardianTextSansWeb-Bold.woff2") format("woff2"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextSansWeb/GuardianTextSansWeb-Bold.woff") format("woff"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextSansWeb/GuardianTextSansWeb-Bold.ttf") format("truetype"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextSansWeb/GuardianTextSansWeb-Bold.svg#GuardianTextSansWeb-Bold") format("svg");
+          font-weight: 700;
+          font-style: normal;
+          font-stretch: normal;
+        }
+
+        @font-face {
+          font-family: "Guardian Text Sans Web";
+          src: url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextSansWeb/GuardianTextSansWeb-BoldItalic.eot");
+          src: url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextSansWeb/GuardianTextSansWeb-BoldItalic.eot?#iefix") format("embedded-opentype"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextSansWeb/GuardianTextSansWeb-BoldItalic.woff2") format("woff2"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextSansWeb/GuardianTextSansWeb-BoldItalic.woff") format("woff"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextSansWeb/GuardianTextSansWeb-BoldItalic.ttf") format("truetype"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextSansWeb/GuardianTextSansWeb-BoldItalic.svg#GuardianTextSansWeb-BoldItalic") format("svg");
+          font-weight: 700;
+          font-style: italic;
+          font-stretch: normal;
+        }
+
+        @font-face {
+          font-family: "Guardian Text Sans Web";
+          src: url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextSansWeb/GuardianTextSansWeb-Black.eot");
+          src: url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextSansWeb/GuardianTextSansWeb-Black.eot?#iefix") format("embedded-opentype"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextSansWeb/GuardianTextSansWeb-Black.woff2") format("woff2"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextSansWeb/GuardianTextSansWeb-Black.woff") format("woff"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextSansWeb/GuardianTextSansWeb-Black.ttf") format("truetype"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextSansWeb/GuardianTextSansWeb-Black.svg#GuardianTextSansWeb-Black") format("svg");
+          font-weight: 800;
+          font-style: normal;
+          font-stretch: normal;
+        }
+
+        @font-face {
+          font-family: "Guardian Text Sans Web";
+          src: url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextSansWeb/GuardianTextSansWeb-BlackItalic.eot");
+          src: url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextSansWeb/GuardianTextSansWeb-BlackItalic.eot?#iefix") format("embedded-opentype"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextSansWeb/GuardianTextSansWeb-BlackItalic.woff2") format("woff2"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextSansWeb/GuardianTextSansWeb-BlackItalic.woff") format("woff"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextSansWeb/GuardianTextSansWeb-BlackItalic.ttf") format("truetype"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianTextSansWeb/GuardianTextSansWeb-BlackItalic.svg#GuardianTextSansWeb-BlackItalic") format("svg");
+          font-weight: 800;
+          font-style: italic;
+          font-stretch: normal;
+        }
+
+        @font-face {
+          font-family: "Guardian Compact Web";
+          src: url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianExtrasWeb/GuardianCompactWeb-Black.eot");
+          src: url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianExtrasWeb/GuardianCompactWeb-Black.eot?#iefix") format("embedded-opentype"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianExtrasWeb/GuardianCompactWeb-Black.woff2") format("woff2"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianExtrasWeb/GuardianCompactWeb-Black.woff") format("woff"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianExtrasWeb/GuardianCompactWeb-Black.ttf") format("truetype"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianExtrasWeb/GuardianCompactWeb-Black.svg#GuardianCompactWeb-Black") format("svg");
+          font-weight: 800;
+          font-style: normal;
+          font-stretch: normal;
+        }
+
+        @font-face {
+          font-family: "Guardian Titlepiece Web";
+          src: url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianExtrasWeb/GuardianTitlepieceWeb-Regular.eot");
+          src: url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianExtrasWeb/GuardianTitlepieceWeb-Regular.eot?#iefix") format("embedded-opentype"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianExtrasWeb/GuardianTitlepieceWeb-Regular.woff2") format("woff2"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianExtrasWeb/GuardianTitlepieceWeb-Regular.woff") format("woff"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianExtrasWeb/GuardianTitlepieceWeb-Regular.ttf") format("truetype"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianExtrasWeb/GuardianTitlepieceWeb-Regular.svg#GuardianTitlepieceWeb-Regular") format("svg");
+          font-weight: 400;
+          font-style: normal;
+          font-stretch: normal;
+        }
+
+        @font-face {
+          font-family: "Guardian Weekend Cond Web";
+          src: url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianExtrasWeb/GuardianWeekendCondWeb-Black.eot");
+          src: url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianExtrasWeb/GuardianWeekendCondWeb-Black.eot?#iefix") format("embedded-opentype"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianExtrasWeb/GuardianWeekendCondWeb-Black.woff2") format("woff2"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianExtrasWeb/GuardianWeekendCondWeb-Black.woff") format("woff"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianExtrasWeb/GuardianWeekendCondWeb-Black.ttf") format("truetype"), url("https://interactive.guim.co.uk/fonts/guss-webfonts/GuardianExtrasWeb/GuardianWeekendCondWeb-Black.svg#GuardianWeekendCondWeb-Black") format("svg");
+          font-weight: 800;
+          font-style: normal;
+          font-stretch: normal;
+        }
+
+        @font-face {
+          font-family: "GH Guardian Headline";
+          src: url("https://interactive.guim.co.uk/fonts/guss-webfonts/GHGuardianHeadline/GHGuardianHeadline-Light.woff2") format("woff2"),
+          url("https://interactive.guim.co.uk/fonts/guss-webfonts/GHGuardianHeadline/GHGuardianHeadline-Light.woff") format("woff"),
+          url("https://interactive.guim.co.uk/fonts/guss-webfonts/GHGuardianHeadline/GHGuardianHeadline-Light.ttf") format("truetype");
+          font-weight: 300;
+          font-style: normal;
+        }
+
+        @font-face {
+          font-family: "GH Guardian Headline";
+          src: url("https://interactive.guim.co.uk/fonts/guss-webfonts/GHGuardianHeadline/GHGuardianHeadline-LightItalic.woff2") format("woff2"),
+          url("https://interactive.guim.co.uk/fonts/guss-webfonts/GHGuardianHeadline/GHGuardianHeadline-LightItalic.woff") format("woff"),
+          url("https://interactive.guim.co.uk/fonts/guss-webfonts/GHGuardianHeadline/GHGuardianHeadline-LightItalic.ttf") format("truetype");
+          font-weight: 300;
+          font-style: italic;
+        }
+
+        @font-face {
+          font-family: "GH Guardian Headline";
+          src: url("https://interactive.guim.co.uk/fonts/guss-webfonts/GHGuardianHeadline/GHGuardianHeadline-Regular.woff2") format("woff2"),
+          url("https://interactive.guim.co.uk/fonts/guss-webfonts/GHGuardianHeadline/GHGuardianHeadline-Regular.woff") format("woff"),
+          url("https://interactive.guim.co.uk/fonts/guss-webfonts/GHGuardianHeadline/GHGuardianHeadline-Regular.ttf") format("truetype");
+          font-weight: 400;
+          font-style: normal;
+        }
+
+        @font-face {
+          font-family: "GH Guardian Headline";
+          src: url("https://interactive.guim.co.uk/fonts/guss-webfonts/GHGuardianHeadline/GHGuardianHeadline-RegularItalic.woff2") format("woff2"),
+          url("https://interactive.guim.co.uk/fonts/guss-webfonts/GHGuardianHeadline/GHGuardianHeadline-RegularItalic.woff") format("woff"),
+          url("https://interactive.guim.co.uk/fonts/guss-webfonts/GHGuardianHeadline/GHGuardianHeadline-RegularItalic.ttf") format("truetype");
+          font-weight: 400;
+          font-style: italic;
+        }
+
+        @font-face {
+          font-family: "GH Guardian Headline";
+          src: url("https://interactive.guim.co.uk/fonts/guss-webfonts/GHGuardianHeadline/GHGuardianHeadline-Medium.woff2") format("woff2"),
+          url("https://interactive.guim.co.uk/fonts/guss-webfonts/GHGuardianHeadline/GHGuardianHeadline-Medium.woff") format("woff"),
+          url("https://interactive.guim.co.uk/fonts/guss-webfonts/GHGuardianHeadline/GHGuardianHeadline-Medium.ttf") format("truetype");
+          font-weight: 500;
+          font-style: normal;
+        }
+
+        @font-face {
+          font-family: "GH Guardian Headline";
+          src: url("https://interactive.guim.co.uk/fonts/guss-webfonts/GHGuardianHeadline/GHGuardianHeadline-MediumItalic.woff2") format("woff2"),
+          url("https://interactive.guim.co.uk/fonts/guss-webfonts/GHGuardianHeadline/GHGuardianHeadline-MediumItalic.woff") format("woff"),
+          url("https://interactive.guim.co.uk/fonts/guss-webfonts/GHGuardianHeadline/GHGuardianHeadline-MediumItalic.ttf") format("truetype");
+          font-weight: 500;
+          font-style: italic;
+        }
+
+        @font-face {
+          font-family: "GH Guardian Headline";
+          src: url("https://interactive.guim.co.uk/fonts/guss-webfonts/GHGuardianHeadline/GHGuardianHeadline-Semibold.woff2") format("woff2"),
+          url("https://interactive.guim.co.uk/fonts/guss-webfonts/GHGuardianHeadline/GHGuardianHeadline-Semibold.woff") format("woff"),
+          url("https://interactive.guim.co.uk/fonts/guss-webfonts/GHGuardianHeadline/GHGuardianHeadline-Semibold.ttf") format("truetype");
+          font-weight: 600;
+          font-style: normal;
+        }
+
+        @font-face {
+          font-family: "GH Guardian Headline";
+          src: url("https://interactive.guim.co.uk/fonts/guss-webfonts/GHGuardianHeadline/GHGuardianHeadline-SemiboldItalic.woff2") format("woff2"),
+          url("https://interactive.guim.co.uk/fonts/guss-webfonts/GHGuardianHeadline/GHGuardianHeadline-SemiboldItalic.woff") format("woff"),
+          url("https://interactive.guim.co.uk/fonts/guss-webfonts/GHGuardianHeadline/GHGuardianHeadline-SemiboldItalic.ttf") format("truetype");
+          font-weight: 600;
+          font-style: italic;
+        }
+
+        @font-face {
+          font-family: "GH Guardian Headline";
+          src: url("https://interactive.guim.co.uk/fonts/guss-webfonts/GHGuardianHeadline/GHGuardianHeadline-Bold.woff2") format("woff2"),
+          url("https://interactive.guim.co.uk/fonts/guss-webfonts/GHGuardianHeadline/GHGuardianHeadline-Bold.woff") format("woff"),
+          url("https://interactive.guim.co.uk/fonts/guss-webfonts/GHGuardianHeadline/GHGuardianHeadline-Bold.ttf") format("truetype");
+          font-weight: 700;
+          font-style: normal;
+        }
+
+        @font-face {
+          font-family: "GH Guardian Headline";
+          src: url("https://interactive.guim.co.uk/fonts/guss-webfonts/GHGuardianHeadline/GHGuardianHeadline-BoldItalic.woff2") format("woff2"),
+          url("https://interactive.guim.co.uk/fonts/guss-webfonts/GHGuardianHeadline/GHGuardianHeadline-BoldItalic.woff") format("woff"),
+          url("https://interactive.guim.co.uk/fonts/guss-webfonts/GHGuardianHeadline/GHGuardianHeadline-BoldItalic.ttf") format("truetype");
+          font-weight: 700;
+          font-style: italic;
+        }
+
+        @font-face {
+          font-family: "GH Guardian Headline";
+          src: url("https://interactive.guim.co.uk/fonts/guss-webfonts/GHGuardianHeadline/GHGuardianHeadline-Black.woff2") format("woff2"),
+          url("https://interactive.guim.co.uk/fonts/guss-webfonts/GHGuardianHeadline/GHGuardianHeadline-Black.woff") format("woff"),
+          url("https://interactive.guim.co.uk/fonts/guss-webfonts/GHGuardianHeadline/GHGuardianHeadline-Black.ttf") format("truetype");
+          font-weight: 900;
+          font-style: normal;
+        }
+
+        @font-face {
+          font-family: "GH Guardian Headline";
+          src: url("https://interactive.guim.co.uk/fonts/guss-webfonts/GHGuardianHeadline/GHGuardianHeadline-BlackItalic.woff2") format("woff2"),
+          url("https://interactive.guim.co.uk/fonts/guss-webfonts/GHGuardianHeadline/GHGuardianHeadline-BlackItalic.woff") format("woff"),
+          url("https://interactive.guim.co.uk/fonts/guss-webfonts/GHGuardianHeadline/GHGuardianHeadline-BlackItalic.ttf") format("truetype");
+          font-weight: 900;
+          font-style: italic;
+        }
+      .f-bar {
+        font-family: 'Guardian Agate Sans 1 Web', monospace;
+        color: #f1f1f1; /* n-5 */
+        text-align: right;
+        line-height: 16px;
+        min-width: 2px;
+        white-space: nowrap;
+        overflow-x: hidden;
+      }
+
+      html { -webkit-font-smoothing: antialiased; }
+      .d-n { display: none; }
+
+      /* TOTHINK: style or inline */
+      .graph {
+        color: #333333; /*n-2*/
+        font-size: 13px;
+        font-family: "Guardian Text Sans Web", Helvetica, Arial, "Lucida Grande", sans-serif;
+        -webkit-font-smoothing: antialiased;
+        border-top: 1px solid rgb(220, 220, 220);
+        border-bottom: 1px solid rgb(220, 220, 220);
+        padding: 6px 0 4px 0;
+      }
+      .chart {
+        position: relative;
+      }
+      .headline {
+        color: black;
+        font-size: 18px;
+        font-family: 'GH Guardian Headline', Georgia, serif;
+        line-height: 24px;
+        margin-bottom: 12px;
+      }
+      .standfirst {
+        font-family: 'Guardian Text Egyptian Web', Georgia, serif;
+        font-size: 14px;
+        line-height: 18px;
+        margin-top: 12px;
+        margin-bottom: 12px;
+        font-weight: 400;
+      }
+      .legend {
+        line-height: 18px;
+        margin-bottom: 24px;
+      }
+      .legend-item {
+        white-space: nowrap;
+        display: inline-block;
+        margin-right: 12px;
+        position: relative;
+      }
+      .legend-color {
+        position: absolute;
+        top: 1px;
+        display: inline-block;
+        width: 6px;
+        height: 12px;
+        margin-right: 4px;
+        border-radius: 2px;
+      }
+      .legend-label {
+        margin-left: 10px;
+      }
+      .axis-x,
+      .axis-y {
+        color: #bdbdbd; /* n-3 */
+        font-family: "Guardian Text Sans Web", Helvetica, Arial, "Lucida Grande", sans-serif;
+      }
+      .axis-top-text {
+        white-space: nowrap;
+      }
+      .label {
+        color: #333;
+        line-height: 18px;
+        vertical-align: top;
+      }
+      .label-x {
+        font-size: 12px;
+      }
+      .label-x span {
+        word-break: break-word
+      }
+      svg {
+        position: absolute;
+        right: 0;
+      }
+      svg path {
+        stroke-linejoin: round;
+      }
+      footer {
+        font-size: 12px;
+        line-height: 16px;
+        margin-top: 6px;
+        padding-top: 8px;
+        font-family: 'Guardian Text Sans Web', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+        color: #767676;
+      }
+      footer > div {
+        word-break: break-word;
+      }
+      .test {
+        font-size: 13px;
+        font-family: 'Guardian Agate Sans 1 Web', monospace;
+        visibility: hidden;
+      }
+      /* end of TOTHINK */
+
+      /* for iOS safari mobile */
+      body { -webkit-text-size-adjust: 100%; }
+    </style>
+    <script src="./iframeMessenger.js.download"></script>
+  <style>body::before, body::after{content: ".";height: 0;margin: 0;overflow: hidden;visibility: hidden;display: block;clear: both;}body{margin: 0 !important;display: inline-block !important;float: left !important;width: 100% !important;box-sizing: border-box !important;}</style></head>
+
+    <body><div class="graph js-graph" style="width: 100%;"><header class="header"><div class="headline"><span data-offset-key="fqqoh-0-0" style="font-weight: bold;"><span data-text="true">Delhi has the worst air pollution out of the world's mega-cities with more than 14 million habitants</span></span></div><div class="standfirst"><span data-offset-key="ehsv7-0-0"><span data-text="true">PM10 levels for the last available year in the period 2010-2016, micrograms per cubic metre of air</span></span></div><div class="legend d-n" style="margin-left: 112px;"><span data-offset-key="fpmfm-0-0"><span data-text="true">PM10 (ug/m3)</span></span></div></header><div data-id="bar" data-res-y="true" class="chart js-chart" style="margin-top: 24px; margin-bottom: 0px; padding-bottom: 1px;"><!-- react-empty: 987 --><div class="axis-x" data-x-bottom="false" data-y-indent="0" data-l-indent="0" data-r-indent="0" style="position: absolute; top: -30px; right: 1px; width: calc(100% - 113px); margin-right: 0px;"><div class="axis-x-tick" style="position: absolute; top: 24px; left: calc(0% + 0px); width: 1px; height: 5px; background-color: rgb(220, 220, 220);"></div><div class="axis-x-tick" style="position: absolute; top: 24px; left: calc(17.12% + 0px); width: 1px; height: 5px; background-color: rgb(220, 220, 220);"></div><div class="axis-x-tick" style="position: absolute; top: 24px; left: calc(34.25% + 0px); width: 1px; height: 5px; background-color: rgb(220, 220, 220);"></div><div class="axis-x-tick" style="position: absolute; top: 24px; left: calc(51.37% + 0px); width: 1px; height: 5px; background-color: rgb(220, 220, 220);"></div><div class="axis-x-tick" style="position: absolute; top: 24px; left: calc(68.49% + 0px); width: 1px; height: 5px; background-color: rgb(220, 220, 220);"></div><div class="axis-x-tick" style="position: absolute; top: 24px; left: calc(85.62% + 0px); width: 1px; height: 5px; background-color: rgb(220, 220, 220);"></div><div class="axis-x-text axis-top-text" style="position: absolute; top: 8px; left: 0px; width: 9px; line-height: 14px; padding-top: 2px; text-align: left; background-color: transparent;"><span data-offset-key="88mn7-0-0"><span data-text="true">0</span></span></div><div class="axis-x-text axis-top-text" style="position: absolute; top: 8px; left: 15.5819%; width: 16px; line-height: 14px; padding-top: 2px; text-align: center; background-color: transparent;"><span data-offset-key="elqrf-0-0"><span data-text="true">50</span></span></div><div class="axis-x-text axis-top-text" style="position: absolute; top: 8px; left: 31.854%; width: 23px; line-height: 14px; padding-top: 2px; text-align: center; background-color: transparent;"><span data-offset-key="7ecah-0-0"><span data-text="true">100</span></span></div><div class="axis-x-text axis-top-text" style="position: absolute; top: 8px; left: 49.211%; width: 23px; line-height: 14px; padding-top: 2px; text-align: center; background-color: transparent;"><span data-offset-key="8jh07-0-0"><span data-text="true">150</span></span></div><div class="axis-x-text axis-top-text" style="position: absolute; top: 8px; left: 66.1736%; width: 23px; line-height: 14px; padding-top: 2px; text-align: center; background-color: transparent;"><span data-offset-key="866dn-0-0"><span data-text="true">200</span></span></div><div class="axis-x-text axis-top-text" style="position: absolute; top: 8px; left: 83.3333%; width: 23px; line-height: 14px; padding-top: 2px; text-align: center; background-color: transparent;"><span data-offset-key="aks6b-0-0"><span data-text="true">250</span></span></div></div><div class="canvas"><div class="row" style="height: 24px;"><div class="label" style="display: inline-block; width: 112px;"><span data-offset-key="6pmk6-0-0" style="font-weight: bold;"><span data-text="true">Delhi 292</span></span></div><div class="group" style="display: inline-block; width: calc(100% - 112px); position: relative;"><div class="grid" style="position: relative; margin-left: 0px; margin-right: 1px;"><div style="position: absolute; left: 0%; top: 0px; width: 1px; height: 20px; background-color: transparent;"></div><div style="position: absolute; left: 17.12%; top: 0px; width: 1px; height: 20px; background-color: rgba(255, 255, 255, 0.5);"></div><div style="position: absolute; left: 34.25%; top: 0px; width: 1px; height: 20px; background-color: rgba(255, 255, 255, 0.5);"></div><div style="position: absolute; left: 51.37%; top: 0px; width: 1px; height: 20px; background-color: rgba(255, 255, 255, 0.5);"></div><div style="position: absolute; left: 68.49%; top: 0px; width: 1px; height: 20px; background-color: rgba(255, 255, 255, 0.5);"></div><div style="position: absolute; left: 85.62%; top: 0px; width: 1px; height: 20px; background-color: rgba(255, 255, 255, 0.5);"></div></div><div class="bars" style="height: 16px; margin-bottom: 8px;"><div class="bar f-bar b00 c-d c0" title="292" style="width: 100%; height: 16px; background-color: rgb(204, 10, 17); margin-bottom: 0px;"></div></div></div></div><div class="row" style="height: 24px;"><div class="label" style="display: inline-block; width: 112px;"><span data-offset-key="ebi49-0-0"><span data-text="true">Greater Cairo </span></span><span data-offset-key="ebi49-0-1" style="font-weight: bold;"><span data-text="true">284</span></span></div><div class="group" style="display: inline-block; width: calc(100% - 112px); position: relative;"><div class="grid" style="position: relative; margin-left: 0px; margin-right: 1px;"><div style="position: absolute; left: 0%; top: 0px; width: 1px; height: 20px; background-color: transparent;"></div><div style="position: absolute; left: 17.12%; top: 0px; width: 1px; height: 20px; background-color: rgba(255, 255, 255, 0.5);"></div><div style="position: absolute; left: 34.25%; top: 0px; width: 1px; height: 20px; background-color: rgba(255, 255, 255, 0.5);"></div><div style="position: absolute; left: 51.37%; top: 0px; width: 1px; height: 20px; background-color: rgba(255, 255, 255, 0.5);"></div><div style="position: absolute; left: 68.49%; top: 0px; width: 1px; height: 20px; background-color: rgba(255, 255, 255, 0.5);"></div><div style="position: absolute; left: 85.62%; top: 0px; width: 1px; height: 20px; background-color: rgba(255, 255, 255, 0.5);"></div></div><div class="bars" style="height: 16px; margin-bottom: 8px;"><div class="bar f-bar b10 c-d c1" title="284" contenteditable="false" style="width: 97.2603%; height: 16px; background-color: rgb(179, 179, 180); margin-bottom: 0px;"></div></div></div></div><div class="row" style="height: 24px;"><div class="label" style="display: inline-block; width: 112px;"><span data-offset-key="6m125-0-0"><span data-text="true">Dhaka </span></span><span data-offset-key="6m125-0-1" style="font-weight: bold;"><span data-text="true">104</span></span></div><div class="group" style="display: inline-block; width: calc(100% - 112px); position: relative;"><div class="grid" style="position: relative; margin-left: 0px; margin-right: 1px;"><div style="position: absolute; left: 0%; top: 0px; width: 1px; height: 20px; background-color: transparent;"></div><div style="position: absolute; left: 17.12%; top: 0px; width: 1px; height: 20px; background-color: rgba(255, 255, 255, 0.5);"></div><div style="position: absolute; left: 34.25%; top: 0px; width: 1px; height: 20px; background-color: rgba(255, 255, 255, 0.5);"></div><div style="position: absolute; left: 51.37%; top: 0px; width: 1px; height: 20px; background-color: rgba(255, 255, 255, 0.5);"></div><div style="position: absolute; left: 68.49%; top: 0px; width: 1px; height: 20px; background-color: rgba(255, 255, 255, 0.5);"></div><div style="position: absolute; left: 85.62%; top: 0px; width: 1px; height: 20px; background-color: rgba(255, 255, 255, 0.5);"></div></div><div class="bars" style="height: 16px; margin-bottom: 8px;"><div class="bar f-bar b20 c-d c2" title="104" contenteditable="false" style="width: 35.6164%; height: 16px; background-color: rgb(179, 179, 180); margin-bottom: 0px;"></div></div></div></div><div class="row" style="height: 24px;"><div class="label" style="display: inline-block; width: 112px;"><span data-offset-key="7i0gq-0-0"><span data-text="true">Mumbai </span></span><span data-offset-key="7i0gq-0-1" style="font-weight: bold;"><span data-text="true">104</span></span></div><div class="group" style="display: inline-block; width: calc(100% - 112px); position: relative;"><div class="grid" style="position: relative; margin-left: 0px; margin-right: 1px;"><div style="position: absolute; left: 0%; top: 0px; width: 1px; height: 20px; background-color: transparent;"></div><div style="position: absolute; left: 17.12%; top: 0px; width: 1px; height: 20px; background-color: rgba(255, 255, 255, 0.5);"></div><div style="position: absolute; left: 34.25%; top: 0px; width: 1px; height: 20px; background-color: rgba(255, 255, 255, 0.5);"></div><div style="position: absolute; left: 51.37%; top: 0px; width: 1px; height: 20px; background-color: rgba(255, 255, 255, 0.5);"></div><div style="position: absolute; left: 68.49%; top: 0px; width: 1px; height: 20px; background-color: rgba(255, 255, 255, 0.5);"></div><div style="position: absolute; left: 85.62%; top: 0px; width: 1px; height: 20px; background-color: rgba(255, 255, 255, 0.5);"></div></div><div class="bars" style="height: 16px; margin-bottom: 8px;"><div class="bar f-bar b30 c-d c3" title="104" contenteditable="false" style="width: 35.6164%; height: 16px; background-color: rgb(179, 179, 180); margin-bottom: 0px;"></div></div></div></div><div class="row" style="height: 24px;"><div class="label" style="display: inline-block; width: 112px;"><span data-offset-key="5aubo-0-0"><span data-text="true">Beijing </span></span><span data-offset-key="5aubo-0-1" style="font-weight: bold;"><span data-text="true">92</span></span></div><div class="group" style="display: inline-block; width: calc(100% - 112px); position: relative;"><div class="grid" style="position: relative; margin-left: 0px; margin-right: 1px;"><div style="position: absolute; left: 0%; top: 0px; width: 1px; height: 20px; background-color: transparent;"></div><div style="position: absolute; left: 17.12%; top: 0px; width: 1px; height: 20px; background-color: rgba(255, 255, 255, 0.5);"></div><div style="position: absolute; left: 34.25%; top: 0px; width: 1px; height: 20px; background-color: rgba(255, 255, 255, 0.5);"></div><div style="position: absolute; left: 51.37%; top: 0px; width: 1px; height: 20px; background-color: rgba(255, 255, 255, 0.5);"></div><div style="position: absolute; left: 68.49%; top: 0px; width: 1px; height: 20px; background-color: rgba(255, 255, 255, 0.5);"></div><div style="position: absolute; left: 85.62%; top: 0px; width: 1px; height: 20px; background-color: rgba(255, 255, 255, 0.5);"></div></div><div class="bars" style="height: 16px; margin-bottom: 8px;"><div class="bar f-bar b40 c-d c4" title="92" contenteditable="false" style="width: 31.5068%; height: 16px; background-color: rgb(179, 179, 180); margin-bottom: 0px;"></div></div></div></div><div class="row" style="height: 24px;"><div class="label" style="display: inline-block; width: 112px;"><span data-offset-key="cvmvv-0-0"><span data-text="true">Shanghai </span></span><span data-offset-key="cvmvv-0-1" style="font-weight: bold;"><span data-text="true">59</span></span></div><div class="group" style="display: inline-block; width: calc(100% - 112px); position: relative;"><div class="grid" style="position: relative; margin-left: 0px; margin-right: 1px;"><div style="position: absolute; left: 0%; top: 0px; width: 1px; height: 20px; background-color: transparent;"></div><div style="position: absolute; left: 17.12%; top: 0px; width: 1px; height: 20px; background-color: rgba(255, 255, 255, 0.5);"></div><div style="position: absolute; left: 34.25%; top: 0px; width: 1px; height: 20px; background-color: rgba(255, 255, 255, 0.5);"></div><div style="position: absolute; left: 51.37%; top: 0px; width: 1px; height: 20px; background-color: rgba(255, 255, 255, 0.5);"></div><div style="position: absolute; left: 68.49%; top: 0px; width: 1px; height: 20px; background-color: rgba(255, 255, 255, 0.5);"></div><div style="position: absolute; left: 85.62%; top: 0px; width: 1px; height: 20px; background-color: rgba(255, 255, 255, 0.5);"></div></div><div class="bars" style="height: 16px; margin-bottom: 8px;"><div class="bar f-bar b50 c-d c5" title="59" contenteditable="false" style="width: 20.2055%; height: 16px; background-color: rgb(179, 179, 180); margin-bottom: 0px;"></div></div></div></div><div class="row" style="height: 24px;"><div class="label" style="display: inline-block; width: 112px;"><span data-offset-key="9ged0-0-0"><span data-text="true">Istanbul </span></span><span data-offset-key="9ged0-0-1" style="font-weight: bold;"><span data-text="true">53</span></span></div><div class="group" style="display: inline-block; width: calc(100% - 112px); position: relative;"><div class="grid" style="position: relative; margin-left: 0px; margin-right: 1px;"><div style="position: absolute; left: 0%; top: 0px; width: 1px; height: 20px; background-color: transparent;"></div><div style="position: absolute; left: 17.12%; top: 0px; width: 1px; height: 20px; background-color: rgba(255, 255, 255, 0.5);"></div><div style="position: absolute; left: 34.25%; top: 0px; width: 1px; height: 20px; background-color: rgba(255, 255, 255, 0.5);"></div><div style="position: absolute; left: 51.37%; top: 0px; width: 1px; height: 20px; background-color: rgba(255, 255, 255, 0.5);"></div><div style="position: absolute; left: 68.49%; top: 0px; width: 1px; height: 20px; background-color: rgba(255, 255, 255, 0.5);"></div><div style="position: absolute; left: 85.62%; top: 0px; width: 1px; height: 20px; background-color: rgba(255, 255, 255, 0.5);"></div></div><div class="bars" style="height: 16px; margin-bottom: 8px;"><div class="bar f-bar b60 c-d c6" title="53" contenteditable="false" style="width: 18.1507%; height: 16px; background-color: rgb(179, 179, 180); margin-bottom: 0px;"></div></div></div></div><div class="row" style="height: 24px;"><div class="label" style="display: inline-block; width: 112px;"><span data-offset-key="33kb3-0-0"><span data-text="true">Mexico City </span></span><span data-offset-key="33kb3-0-1" style="font-weight: bold;"><span data-text="true">39</span></span></div><div class="group" style="display: inline-block; width: calc(100% - 112px); position: relative;"><div class="grid" style="position: relative; margin-left: 0px; margin-right: 1px;"><div style="position: absolute; left: 0%; top: 0px; width: 1px; height: 20px; background-color: transparent;"></div><div style="position: absolute; left: 17.12%; top: 0px; width: 1px; height: 20px; background-color: rgba(255, 255, 255, 0.5);"></div><div style="position: absolute; left: 34.25%; top: 0px; width: 1px; height: 20px; background-color: rgba(255, 255, 255, 0.5);"></div><div style="position: absolute; left: 51.37%; top: 0px; width: 1px; height: 20px; background-color: rgba(255, 255, 255, 0.5);"></div><div style="position: absolute; left: 68.49%; top: 0px; width: 1px; height: 20px; background-color: rgba(255, 255, 255, 0.5);"></div><div style="position: absolute; left: 85.62%; top: 0px; width: 1px; height: 20px; background-color: rgba(255, 255, 255, 0.5);"></div></div><div class="bars" style="height: 16px; margin-bottom: 8px;"><div class="bar f-bar b70 c-d c7" title="39" contenteditable="false" style="width: 13.3562%; height: 16px; background-color: rgb(179, 179, 180); margin-bottom: 0px;"></div></div></div></div><div class="row" style="height: 24px;"><div class="label" style="display: inline-block; width: 112px;"><span data-offset-key="dm8au-0-0"><span data-text="true">Sao Paulo </span></span><span data-offset-key="dm8au-0-1" style="font-weight: bold;"><span data-text="true">28</span></span></div><div class="group" style="display: inline-block; width: calc(100% - 112px); position: relative;"><div class="grid" style="position: relative; margin-left: 0px; margin-right: 1px;"><div style="position: absolute; left: 0%; top: 0px; width: 1px; height: 20px; background-color: transparent;"></div><div style="position: absolute; left: 17.12%; top: 0px; width: 1px; height: 20px; background-color: rgba(255, 255, 255, 0.5);"></div><div style="position: absolute; left: 34.25%; top: 0px; width: 1px; height: 20px; background-color: rgba(255, 255, 255, 0.5);"></div><div style="position: absolute; left: 51.37%; top: 0px; width: 1px; height: 20px; background-color: rgba(255, 255, 255, 0.5);"></div><div style="position: absolute; left: 68.49%; top: 0px; width: 1px; height: 20px; background-color: rgba(255, 255, 255, 0.5);"></div><div style="position: absolute; left: 85.62%; top: 0px; width: 1px; height: 20px; background-color: rgba(255, 255, 255, 0.5);"></div></div><div class="bars" style="height: 16px; margin-bottom: 8px;"><div class="bar f-bar b80 c-d c8" title="28" contenteditable="false" style="width: 9.58904%; height: 16px; background-color: rgb(179, 179, 180); margin-bottom: 0px;"></div></div></div></div><div class="row" style="height: 24px;"><div class="label" style="display: inline-block; width: 112px;"><span data-offset-key="f3vqq-0-0"><span data-text="true">Buenos Aires </span></span><span data-offset-key="f3vqq-0-1" style="font-weight: bold;"><span data-text="true">27</span></span></div><div class="group" style="display: inline-block; width: calc(100% - 112px); position: relative;"><div class="grid" style="position: relative; margin-left: 0px; margin-right: 1px;"><div style="position: absolute; left: 0%; top: 0px; width: 1px; height: 20px; background-color: transparent;"></div><div style="position: absolute; left: 17.12%; top: 0px; width: 1px; height: 20px; background-color: rgba(255, 255, 255, 0.5);"></div><div style="position: absolute; left: 34.25%; top: 0px; width: 1px; height: 20px; background-color: rgba(255, 255, 255, 0.5);"></div><div style="position: absolute; left: 51.37%; top: 0px; width: 1px; height: 20px; background-color: rgba(255, 255, 255, 0.5);"></div><div style="position: absolute; left: 68.49%; top: 0px; width: 1px; height: 20px; background-color: rgba(255, 255, 255, 0.5);"></div><div style="position: absolute; left: 85.62%; top: 0px; width: 1px; height: 20px; background-color: rgba(255, 255, 255, 0.5);"></div></div><div class="bars" style="height: 16px; margin-bottom: 8px;"><div class="bar f-bar b90 c-d c9" title="27" contenteditable="false" style="width: 9.24658%; height: 16px; background-color: rgb(179, 179, 180); margin-bottom: 0px;"></div></div></div></div></div><!-- react-empty: 1198 --></div><footer class=""><span data-offset-key="8nlfd-0-0"><span data-text="true">Guardian Graphic | Source: WHO. PM10 = Particulate matter of 10 microns or less</span></span></footer><span class="test js-test-res"></span></div>
+
+  
+    <script>
+      var elChart = document.querySelector(".js-chart")
+      var elAxisX = document.querySelector(".axis-x")
+      var elsText = elAxisX ? elAxisX.querySelectorAll(".axis-x-text") : []
+      var indentL = elAxisX ? parseInt(elAxisX.dataset.lIndent, 10) : 0
+      var extendR = elAxisX ? parseInt(elAxisX.dataset.rIndent, 10) : 0
+      var isBarBased = elChart.getAttribute("data-id").toLowerCase().indexOf("bar") > -1
+
+      // responsive
+      function responsive() {
+        iframeMessenger.resize()  // 1
+        rescaleSvgElements()      // 2
+        updateYLabelWidths()      // 3
+        updateXAxisTextPosition() // 4
+        updateChartHeight()       // 5
+      }
+      responsive()
+
+      // handle event
+      var timeout = null
+      window.addEventListener('resize', function(evt) {
+        if (timeout) window.clearTimeout(timeout)
+        timeout = window.setTimeout(function() {
+          responsive()
+          timeout = null
+        }, 200)
+      });
+
+      /* 1. iframe resize */
+      // iframeMessenger for embed in guardian's page
+
+      /* 2. svg path or circle rescale */
+      function rescaleSvgElements() {
+        var width = 300
+        var elSvg = document.querySelector("svg")
+        if (elSvg) {
+          var svgWidth = elSvg.getBoundingClientRect().width
+          // line chart
+          var strokeWidth = Math.round(2*width*10/svgWidth)/10
+          var paths = Array.prototype.slice.call(document.querySelectorAll("path"))
+          paths.forEach(function(path) { path.setAttribute("stroke-width", strokeWidth); })
+          // plot chart
+          var r = Math.round(3*width*10/svgWidth)/10
+          var circles = Array.prototype.slice.call(document.querySelectorAll("circle"))
+          circles.forEach(function(circle) { circle.setAttribute("r", r); })
+      }}
+
+      /* 3. y label width update */
+      function updateYLabelWidths() {
+        if (elChart.getAttribute("data-res-y") === "false") return
+
+        const elRows = [...elChart.querySelectorAll(".row")]
+        const elGroups = [...elChart.querySelectorAll(".group")]
+        const elLegend = document.querySelector(".legend")
+        const labelWidth = elChart.querySelector(".label").offsetWidth
+        const chartWidth = elChart.offsetWidth
+        const isInline = labelWidth <= chartWidth/3
+
+        elRows.forEach(el => {
+          el.style.height = isInline ? "24px" : "auto"
+        })
+        elGroups.forEach(el => {
+          el.style.width = isInline ? "calc(" + 100 + "% - " + labelWidth + "px)" : "100%"
+          el.style.display = isInline ? "inline-block" : "block"
+        })
+
+        elAxisX.style.width = "calc(100% - " + ((isInline ? labelWidth : 0) + indentL + extendR + 1) + "px)"
+        elLegend.style.marginLeft = isInline ? labelWidth + "px" : 0
+      }
+
+      /* 4. x axis text position update */
+      function updateXAxisTextPosition() {
+        if (!elAxisX) return
+
+        var elsTick = elAxisX.querySelectorAll(".axis-x-tick")
+        var elTest = document.querySelector(".js-test-res")
+
+        // a. default width / left
+        var axisXWidth = elAxisX.offsetWidth
+        var maxWidth = elsTick[1].offsetLeft - elsTick[0].offsetLeft
+        var txtWidths = [].slice.call(elsText).map((el, i) => {
+          elTest.textContent = el.textContent
+          var txtWidth = elTest.offsetWidth + 2
+          var resWidth = Math.min(txtWidth, maxWidth)
+          el.style.width = resWidth + "px"
+          el.style.left = (elsTick[i].offsetLeft - resWidth / 2) * 100 / axisXWidth + "%"
+          el.style.textAlign = "center"
+          return txtWidth
+        })
+        elTest.textContent = ""
+
+        // b. adjust width if multi lines
+        var isMultiLine = txtWidths.find(w => w > maxWidth)
+        if (isMultiLine) {
+          [].slice.call(elsText).forEach((el, i) => {
+            var txtWidth = el.querySelector("span").offsetWidth + 1
+            var resWidth = Math.min(txtWidth, maxWidth)
+            el.style.width = resWidth + "px"
+            el.style.left = (elsTick[i].offsetLeft - resWidth / 2) * 100 / axisXWidth + "%"
+          })
+        }
+
+        // c. adjust two ends if out of frame
+        var iLast = elsTick.length - 1
+        var indent = parseInt(elAxisX.dataset.yIndent, 10) + indentL
+        var textStrLeft = (indent + elsTick[0].offsetLeft) - elsText[0].offsetWidth / 2
+        var textEndRight = (axisXWidth + extendR - elsTick[iLast].offsetLeft) - elsText[iLast].offsetWidth / 2
+        if (textStrLeft < 0) {
+          elsText[0].style.left = ((isBarBased ? 0 : 1) - indent) + "px"
+          elsText[0].style.textAlign = "left"
+        }
+        if (textEndRight < 0) {
+          elsText[iLast].style.left = "auto"
+          elsText[iLast].style.right = (-1) - extendR + "px"
+          elsText[iLast].style.textAlign = "right"
+        }
+      }
+
+      /* chart height update */
+      function updateChartHeight() {
+        var elsLabel = document.querySelectorAll(".label-x .label")
+        var isAxisXBottom = elAxisX ? (elAxisX.dataset.xBottom==="true") : false
+        if (isAxisXBottom || elsLabel.length > 0) {
+          var elsAll = [].slice.call(elsText).concat([].slice.call(elsLabel))
+          var heights = elsAll.map(el => Math.ceil(el.offsetHeight))
+          var maxHeight = Math.max.apply(null, heights)
+          elChart.style.marginBottom = (maxHeight + 14) + "px"
+        }
+      }
+    </script>
+  
+</body></html>

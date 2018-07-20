@@ -1,0 +1,162 @@
+/*@font-face {
+  font-family: 'Trade Gothic LT Std';
+  src: url('TradeGothicLTStd-BdCn20.eot');
+  src: url('TradeGothicLTStd-BdCn20.eot?#iefix') format('embedded-opentype'),
+    url('TradeGothicLTStd-BdCn20.woff') format('woff'),
+    url('TradeGothicLTStd-BdCn20.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'gotham_boldregular';
+    src: url('gotham-bold-webfont.woff2') format('woff2'),
+         url('gotham-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline; }
+
+html {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle; }
+
+q, blockquote {
+  quotes: none; }
+  q:before, q:after, blockquote:before, blockquote:after {
+    content: "";
+    content: none; }
+
+a img {
+  border: none; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block; }
+
+*, :before, :after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.abs-pos, #wrapper, #click_through {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 300px;
+  height: 600px;
+  overflow: hidden; }
+
+#wrapper {
+  font-family: 'Montserrat', sans-serif;
+  color:#fff;
+  position: relative;
+  visibility: hidden;
+  /*font-family: 'gotham_boldregular', sans-serif; */
+  font-weight: bold; 
+  font-style: normal;}
+  #wrapper.show {
+    visibility: visible; }
+
+#click_through {
+  z-index: 999;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px solid #000000; }
+
+
+#ctaCopy {
+  width:96px;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+}
+
+#bg, #logo {
+  width:160px;
+  height:600px;
+}
+
+#cta {
+  position:relative;
+  left:50%;
+  top:62%;
+}
+
+#ctaCopy {
+    display: block;
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 172px;
+    height: 32px;
+    padding-top: 7px;
+    color: #ffffff;
+    font-family: arial;
+    font-size: 11px;
+    font-weight: bold;
+    line-height: 140%;
+    text-align: center; 
+    border:thin solid #fff;
+}
+
+
+#container {
+  width: 300px;
+  height: 600px;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+#sprite1_holder, #sprite2_holder, #sprite3_holder, #sprite4_holder, #sprite5_holder {
+  width: 300px;
+  height: 400px;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+#copy, #copy_resolve {
+  width:100%;
+  text-align:center;
+  position:absolute;
+  top:236px;
+  font-size:15px;
+  line-height:19px;
+  -webkit-font-smoothing: antialiased;
+}
+
+.reg {
+  font-size: 7px;
+  top:-3px;
+  position:relative;
+}

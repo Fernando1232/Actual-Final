@@ -1,0 +1,1442 @@
+var LACTAID = LACTAID || {};
+var nameSpace = LACTAID || {};
+
+( function () {
+	"use strict";
+	
+	var timeline;
+	var wrapper, clickThrough, width, height;
+
+	var txt_copy,
+		txt_copy_resolve,
+		txt_cta_copy;
+
+	var asset_bg,
+		asset_logo,
+		asset_sprite1,
+		asset_sprite2,
+		asset_sprite3,
+		asset_sprite4,
+		asset_sprite5,
+		asset_resolve_img,
+		asset_copy;
+
+	var copy_format;
+	var ctaCopy_format;	
+	var clickTAG_url;
+	var creativeName;
+
+	
+	nameSpace.init = function () {
+		// Initialize any variables here
+		wrapper = document.getElementById( 'wrapper' );
+		clickThrough = document.getElementById('click_through');
+		
+		width = 300;
+		height = 600;
+
+		wrapper.className = 'show';
+		nameSpace.IDsToVars();
+
+		preloadimages(preloadassets).done(function(){
+			nameSpace.buildDynamicContent();
+			nameSpace.initClickTag();
+			nameSpace.initAnimation();
+			nameSpace.startAnimation();
+			startAd();
+		})
+	
+	};
+
+	nameSpace.initClickTag = function () {
+		clickThrough.onclick = function () {
+			jvxAd.openClickThrough();
+		};		
+	};
+
+	nameSpace.initAnimation = function () {
+		
+		TweenMax.set(copy,{alpha:0, y:"+=25"});
+		TweenMax.set(copy_resolve,{alpha:0, y:"+=25"});
+		TweenMax.set(cta, {alpha:0, scale:0, transformOrigin:"50% 50%"});
+		TweenMax.set(resolve_img, {alpha:0});
+
+
+		timeline = new TimelineMax( {
+			delay: 0.2,
+			onComplete: nameSpace.onAnimationComplete
+		} );
+
+		timeline.pause();
+		
+		if(creativeName === '100_REAL_MILK' || creativeName === '100_REAL_MILK_v2'){
+
+			TweenMax.set( container, {height:219});
+
+
+			timeline.add( [
+
+				TweenMax.to( copy, .8, {alpha:1, y:"-=25", ease:Cubic.easeOut, delay:.8} ),
+				TweenMax.to( cta, 0.5, { scale:1, alpha:1, ease:Expo.easeOut, delay:5.1 } )	
+
+
+			] );
+
+		}
+
+		if(creativeName === '100_REAL_MILK_CHOCOLATE'){
+
+			TweenMax.set( container, {height:219});
+
+
+			timeline.add( [
+
+				TweenMax.to( copy, .8, {alpha:1, y:"-=25", ease:Cubic.easeOut, delay:.8} ),
+				TweenMax.to( cta, 0.5, { scale:1, alpha:1, ease:Expo.easeOut, delay:5.1 } )	
+
+
+			] );
+
+		}
+
+		if(creativeName === 'HEALTHFUL'){
+
+			TweenMax.set( copy, {y:"-=75"});
+			TweenMax.set( copy_resolve, {y:"-=100 "});
+			TweenMax.set( container, {height:300});
+
+			timeline.add( [
+
+				TweenMax.to( copy, 1, {alpha:1, y:"-=25", ease:Cubic.easeOut, delay:.8} ),
+				TweenMax.to( copy, .8, {alpha:0, ease:Cubic.easeInOut, delay:8}),
+
+				//TweenMax.to( copy_resolve, 1, {alpha:1, y:"-=25", ease:Cubic.easeOut, delay:8.5}),
+				TweenMax.to( copy_resolve, 1, {alpha:1, ease:Cubic.easeOut, delay:8.5}),
+				TweenMax.to( cta, 0.5, { scale:1, alpha:1, ease:Expo.easeOut, delay:10} )	
+
+			] );
+
+		}
+
+		if(creativeName === 'HOLY_COW_v1' || creativeName === 'HOLY_COW_v2'){
+
+			TweenMax.set( copy, {y:"-=30"});
+			TweenMax.set( copy_resolve, {y:"-=178"});
+			TweenMax.set( container, {height:220});
+			TweenMax.set( resolve_img, {alpha:1, x:width});
+
+			timeline.add( [
+
+				TweenMax.to( copy, .8, {alpha:1, y:"-=25", ease:Cubic.easeOut, delay:.8} ),
+				TweenMax.to( [copy, container], 1, {x:-width, ease:Cubic.easeInOut, delay:6.5}),
+				TweenMax.to( resolve_img, 1, {x:0, ease:Cubic.easeInOut, delay:6.5}),
+
+	
+				TweenMax.to( copy_resolve, .5, {alpha:1, ease:Cubic.easeOut, delay:7}),
+				TweenMax.to( cta, 0.5, { scale:1, alpha:1, ease:Expo.easeOut, delay:7.1} )	
+
+			] );
+
+		}
+
+		if(creativeName === 'UDDERLY_COCOA_v1' || creativeName === 'UDDERLY_COCOA_v2' || creativeName === 'UDDERLY_COCOA_v3'){
+
+			TweenMax.set( copy, {y:"-=47"});
+			TweenMax.set( copy_resolve, {y:"-=72"});
+			TweenMax.set( container, {height:180});
+
+			timeline.add( [
+
+				TweenMax.to( copy, .8, {alpha:1, y:"-=25", ease:Cubic.easeOut, delay:.8} ),
+				TweenMax.to( copy, 1, {alpha:0, ease:Cubic.easeInOut, delay:5}),
+
+	
+				//TweenMax.to( copy_resolve, 1, {alpha:1, y:"-=25", ease:Cubic.easeOut, delay:6}),
+				TweenMax.to( copy_resolve, 1, {alpha:1, ease:Cubic.easeOut, delay:6}),
+				TweenMax.to( cta, 0.5, { scale:1, alpha:1, ease:Expo.easeOut, delay:7.5} )	
+
+
+			] );
+
+
+		}
+
+		if(creativeName === 'UDDERLY_COOKIE'){
+
+			TweenMax.set( copy, {y:"-=47"});
+			TweenMax.set( copy_resolve, {y:"-=72"});
+			TweenMax.set( container, {height:180});
+
+			timeline.add( [
+
+				TweenMax.to( copy, .8, {alpha:1, y:"-=25", ease:Cubic.easeOut, delay:.8} ),
+				TweenMax.to( copy, 1, {alpha:0, ease:Cubic.easeInOut, delay:4.4}),
+
+	
+				//TweenMax.to( copy_resolve, 1, {alpha:1, y:"-=25", ease:Cubic.easeOut, delay:8}),
+				TweenMax.to( copy_resolve, 1, {alpha:1, ease:Cubic.easeOut, delay:5.4}),
+				TweenMax.to( cta, 0.5, { scale:1, alpha:1, ease:Expo.easeOut, delay:7.1} )	
+
+
+			] );
+
+
+		}
+
+		if(creativeName === 'UDDERLY_SMOOTHIE'){
+
+			TweenMax.set( copy, {y:"-=47"});
+			TweenMax.set( copy_resolve, {y:"-=72"});
+			TweenMax.set( container, {height:180});
+
+			timeline.add( [
+
+				TweenMax.to( copy, .8, {alpha:1, y:"-=25", ease:Cubic.easeOut, delay:.8} ),
+				TweenMax.to( copy, 1, {alpha:0, ease:Cubic.easeInOut, delay:5}),
+
+	
+				//TweenMax.to( copy_resolve, 1, {alpha:1, y:"-=25", ease:Cubic.easeOut, delay:6}),
+				TweenMax.to( copy_resolve, 1, {alpha:1, ease:Cubic.easeOut, delay:6}),
+				TweenMax.to( cta, 0.5, { scale:1, alpha:1, ease:Expo.easeOut, delay:7.5} )	
+
+
+			] );
+
+
+		}
+
+		if(creativeName === 'UDDERLY_v1' || creativeName === 'UDDERLY_v2'){
+
+			TweenMax.set( copy, {y:"-=47"});
+			TweenMax.set( copy_resolve, {y:"-=72"});
+			TweenMax.set( container, {height:180});
+
+			timeline.add( [
+
+				TweenMax.to( copy, .8, {alpha:1, y:"-=25", ease:Cubic.easeOut, delay:.8} ),
+				TweenMax.to( copy, 1, {alpha:0, ease:Cubic.easeInOut, delay:4.5}),
+
+	
+				//TweenMax.to( copy_resolve, 1, {alpha:1, y:"-=25", ease:Cubic.easeOut, delay:5.5}),
+				TweenMax.to( copy_resolve, 1, {alpha:1, ease:Cubic.easeOut, delay:5.5}),
+				TweenMax.to( cta, 0.5, { scale:1, alpha:1, ease:Expo.easeOut, delay:7} )	
+
+
+			] );
+
+
+		}
+
+		if(creativeName === 'GET_COOKIN_A'){
+
+			TweenMax.set( copy, {y:"-=47"});
+			TweenMax.set( copy_resolve, {y:"-=72"});
+			TweenMax.set( container, {height:190});
+			TweenMax.set( resolve_img, {alpha:1, x:width});
+
+			timeline.add( [
+
+				TweenMax.to( copy, .8, {alpha:1, y:"-=25", ease:Cubic.easeOut, delay:.8} ),
+				TweenMax.to( copy, 1, {alpha:0, ease:Cubic.easeInOut, delay:6}),
+	
+				//TweenMax.to( copy_resolve, 1, {alpha:1, y:"-=25", ease:Cubic.easeOut, delay:7}),
+				TweenMax.to( copy_resolve, 1, {alpha:1, ease:Cubic.easeOut, delay:7}),
+				TweenMax.to( cta, 0.5, { scale:1, alpha:1, ease:Expo.easeOut, delay:8.5} )		
+
+			] );
+
+		}
+
+		if(creativeName === 'GET_COOKIN_B'){
+
+			TweenMax.set( copy, {y:"-=47"});
+			TweenMax.set( copy_resolve, {y:"-=178"});
+			TweenMax.set( container, {height:180});
+			TweenMax.set( resolve_img, {alpha:1, x:width});
+
+			timeline.add( [
+
+				TweenMax.to( copy, .8, {alpha:1, y:"-=25", ease:Cubic.easeOut, delay:.8} ),
+				TweenMax.to( [copy, container], 1, {x:-width, ease:Cubic.easeInOut, delay:7}),
+				TweenMax.to( resolve_img, 1, {x:0, ease:Cubic.easeInOut, delay:7}),
+
+	
+				TweenMax.to( copy_resolve, .5, {alpha:1, ease:Cubic.easeOut, delay:7.5}),
+				TweenMax.to( cta, 0.5, { scale:1, alpha:1, ease:Expo.easeOut, delay:9} )	
+
+			] );
+
+		}
+
+		if(creativeName === 'SCOOP_v1' || creativeName === 'SCOOP_v2'){
+
+			TweenMax.set( copy, {y:"-=45"});
+			TweenMax.set( copy_resolve, {y:"-=70"});
+			TweenMax.set( container, {height:320});
+
+			timeline.add( [
+
+				TweenMax.to( copy, .8, {alpha:1, y:"-=25", ease:Cubic.easeOut, delay:.8} ),
+				TweenMax.to( copy, 1, {alpha:0, ease:Cubic.easeInOut, delay:6.5}),
+
+	
+				//TweenMax.to( copy_resolve, 1, {alpha:1, y:"-=25", ease:Cubic.easeOut, delay:7.5}),
+				TweenMax.to( copy_resolve, 1, {alpha:1, ease:Cubic.easeOut, delay:7.5}),
+				TweenMax.to( cta, 0.5, { scale:1, alpha:1, ease:Expo.easeOut, delay:9} )	
+
+
+			] );
+
+
+		}
+
+		if(creativeName === 'MORE_CALCIUM'){
+
+			TweenMax.set( copy, {y:"-=38"});
+			TweenMax.set( copy_resolve, {y:"-=63"});
+			TweenMax.set( container, {height:180});
+			TweenMax.set( cta, {y:'-=6'});
+			TweenMax.set( resolve_img, {alpha:1});
+
+			timeline.add( [
+
+				TweenMax.to( copy, .8, {alpha:1, y:"-=25", ease:Cubic.easeOut, delay:.8} ),
+				TweenMax.to( copy, 1, {alpha:0, ease:Cubic.easeInOut, delay:4.5}),
+
+	
+				//TweenMax.to( copy_resolve, 1, {alpha:1, y:"-=25", ease:Cubic.easeOut, delay:5.5}),
+				TweenMax.to( copy_resolve, 1, {alpha:1, ease:Cubic.easeOut, delay:5.5}),
+				TweenMax.to( cta, 0.5, { scale:1, alpha:1, ease:Expo.easeOut, delay:7} )
+
+
+			] );
+
+
+		}
+
+		if(creativeName === 'EVEN_MORE_YUM'){
+
+			TweenMax.set( copy, {y:"+=0"});
+			TweenMax.set( copy_resolve, {y:"-=25"});
+			TweenMax.set( container, {height:400});
+
+			timeline.add( [
+
+				TweenMax.to( copy, 1, {alpha:1, y:"-=25", ease:Cubic.easeOut, delay:.8} ),
+				TweenMax.to( copy, .8, {alpha:0, ease:Cubic.easeInOut, delay:5.2}),
+
+				//TweenMax.to( copy_resolve, 1, {alpha:1, y:"-=25", ease:Cubic.easeOut, delay:6.2}),
+				TweenMax.to( copy_resolve, 1, {alpha:1, ease:Cubic.easeOut, delay:6.2}),
+				TweenMax.to( cta, 0.5, { scale:1, alpha:1, ease:Expo.easeOut, delay:7.7} )	
+
+			] );
+
+		}
+
+		if(creativeName === 'CHECKOUT_v1' || creativeName === 'CHECKOUT_v2'){
+
+			TweenMax.set( copy, {y:"-=76"});
+			TweenMax.set( copy_resolve, {y:"-=101"});
+			TweenMax.set( container, {height:160});
+
+			timeline.add( [
+
+				TweenMax.to( copy, .8, {alpha:1, y:"-=25", ease:Cubic.easeOut, delay:1.2} ),
+				TweenMax.to( copy, 1, {alpha:0, ease:Cubic.easeInOut, delay:5}),
+
+	
+				//TweenMax.to( copy_resolve, 1, {alpha:1, y:"-=25", ease:Cubic.easeOut, delay:6}),
+				TweenMax.to( copy_resolve, 1, {alpha:1, ease:Cubic.easeOut, delay:6}),
+				TweenMax.to( cta, 0.5, { scale:1, alpha:1, ease:Expo.easeOut, delay:7.5} )	
+
+
+			] );
+
+
+		}
+
+		
+	};
+
+	nameSpace.buildDynamicContent = function(){
+
+		creativeName = global_creativeName;
+
+		txt_copy = global_txt_copy;
+		txt_copy_resolve = global_txt_copy_resolve;
+
+		txt_cta_copy = global_txt_cta_copy;
+
+		asset_bg = global_asset_bg;
+		
+		asset_sprite1 = global_asset_sprite1; 
+		asset_sprite2 = global_asset_sprite2;
+		asset_sprite3 = global_asset_sprite3;	
+		asset_sprite4 = global_asset_sprite4;	
+		asset_sprite5 = global_asset_sprite5;	
+
+		asset_logo = global_asset_logo;
+
+		asset_resolve_img = global_asset_resolve_img;
+
+
+		nameSpace.insertCopy(
+			copy, 
+			txt_copy
+		);
+
+		nameSpace.insertCopy(
+			copy_resolve, 
+			txt_copy_resolve
+		);
+
+		nameSpace.insertCopy(
+			ctaCopy,
+			txt_cta_copy
+		);
+
+
+		nameSpace.insertImage(bg, asset_bg);
+		nameSpace.insertImage(logo, asset_logo);
+		nameSpace.insertImage(sprite1, asset_sprite1);
+		nameSpace.insertImage(sprite2, asset_sprite2);
+		nameSpace.insertImage(sprite3, asset_sprite3);
+		nameSpace.insertImage(sprite4, asset_sprite4);
+		nameSpace.insertImage(sprite5, asset_sprite5);
+		nameSpace.insertImage(resolve_img, asset_resolve_img);
+
+	}
+
+	nameSpace.insertCopy = function(_target, _copy){
+
+		_target.innerHTML = _copy;
+
+	}
+
+	nameSpace.insertImage = function(_target, _img){
+		_target.style.backgroundSize = 'contain';
+		// _target.style.backgroundImage = "url('" + _img + "')";
+		_target.innerHTML = '<img src="' + _img + '" />';
+	}
+
+	nameSpace.startAnimation = function () {
+		// Code for animation		
+		timeline.play();
+	};
+
+	nameSpace.onAnimationComplete = function () {
+		// Log duration of timeline
+		console.log( 'Animation Duration: ' + timeline.time() + 's' );
+
+		// Show a CTA or any animations outside main timeline
+		// TweenMax.from( cta, 0.4, { y: '110%' } );
+		// TweenMax.to( cta, 0.4, { opacity: 1 } );
+	};
+
+	nameSpace.IDsToVars = function(){
+		var allElements = document.getElementsByTagName("*");
+
+		for (var q = 0; q<allElements.length; q++){
+			var el = allElements[q];
+			if (el.id){
+				window[el.id]=document.getElementById(el.id);
+				el.style.position = "absolute";
+				
+			}
+		}
+	};
+
+	function startAd() {
+
+		// var tapEvent = "ontouchend" in document.createElement("div") ? "touchend" : "click";
+
+		// clickScreen.addEventListener(tapEvent, function() {
+		// 	clickthrough();
+		// }, false);
+
+		// function clickthrough() {
+		// 	window.open(clickTag, '_blank');
+		// }
+
+		//hide sprite 2 so text does not overlap
+		document.getElementById('sprite1_holder').style.opacity = '1';
+		document.getElementById('sprite2_holder').style.opacity = '0';
+		document.getElementById('sprite3_holder').style.opacity = '0';
+		document.getElementById('sprite4_holder').style.opacity = '0';
+		document.getElementById('sprite5_holder').style.opacity = '0';
+
+		document.getElementById('container').style.visibility = 'visible';
+
+		setTimeout(function(){
+
+			if(creativeName === '100_REAL_MILK' || creativeName === '100_REAL_MILK_v2'){
+				REALMILK100_seq01();
+			}
+
+			if(creativeName === '100_REAL_MILK_CHOCOLATE'){
+				REALMILK100CHOCOLATE_seq01();
+			}
+
+			if(creativeName === 'HEALTHFUL'){
+				HEALTHFUL_seq01();
+			}
+
+			if(creativeName === 'HOLY_COW_v1' || creativeName === 'HOLY_COW_v2'){
+				HOLYCOW_seq01();
+			}
+
+			if(creativeName === 'UDDERLY_COCOA_v1' || creativeName === 'UDDERLY_COCOA_v2' || creativeName === 'UDDERLY_COCOA_v3'){
+				UDDERLYCOCOA_seq01();
+			}
+
+			if(creativeName === 'UDDERLY_COOKIE'){
+				UDDERLYCOOKIE_seq01();
+			}
+
+			if(creativeName === 'UDDERLY_SMOOTHIE'){
+				UDDERLYSMOOTHIE_seq01();
+			}
+
+			if(creativeName === 'UDDERLY_v1' || creativeName === 'UDDERLY_v2'){
+				UDDERLY_seq01();
+			}
+
+			if(creativeName === 'GET_COOKIN_A'){
+				GETCOOKINa_seq01();
+			}
+
+			if(creativeName === 'GET_COOKIN_B'){
+				GETCOOKINb_seq01();
+			}
+
+			if(creativeName === 'SCOOP_v1' || creativeName === 'SCOOP_v2'){
+				SCOOP_seq01();
+			}
+
+			if(creativeName === 'MORE_CALCIUM'){
+				MORECALCIUM_seq01();
+			}
+
+			if(creativeName === 'EVEN_MORE_YUM'){
+				EVENMOREYUM_seq01();
+			}
+
+			if(creativeName === 'CHECKOUT_v1' || creativeName === 'CHECKOUT_v2'){
+				CHECKOUT_seq01();
+			}
+
+
+
+
+			
+		}, 800);
+	};
+
+
+
+
+// ---- START animation for 100 REAL MILK ------- //
+
+	function REALMILK100_seq01() {
+		//init sprite 1
+		var timerone;
+		var ss = document.getElementById('sprite1');
+		var sh = 14960;
+		var fh = 220;
+
+		var oy = 0;
+		var endy = -(sh); //adj for seamless handoff
+		timerone = setInterval(function () {
+			if (oy <= endy + (fh * 0)){ //adj for seamless handoff
+				clearInterval(timerone);
+				REALMILK100_seq02(); //immediately play sprite2 at end of sprite1
+			}
+			ss.style.top = oy + 'px';
+			oy -= fh;
+		}, 35);
+	}
+
+	function REALMILK100_seq02() {
+		//hide sprite 1 so image text does not overlap
+		document.getElementById('sprite1_holder').style.opacity = '0';
+		document.getElementById('sprite2_holder').style.opacity = '1';
+
+		//init sprite 2
+		var timertwo;
+		var ss = document.getElementById('sprite2');
+		var sh = 12760;
+		var fh = 220;
+
+		var oy = 0;
+		var endy = -(sh - (fh * 1));
+		timertwo = setInterval(function () {
+			if (oy <= endy + (fh * .5)){
+				clearInterval(timertwo);
+			}
+			ss.style.top = oy + 'px';
+			oy -= fh;
+		}, 35);
+	}
+
+
+	// ---- END  ------- //
+
+
+
+	// ---- START animation for 100 REAL MILK ------- //
+
+	function REALMILK100CHOCOLATE_seq01() {
+		//init sprite 1
+		var timerone;
+		var ss = document.getElementById('sprite1');
+		var sh = 14960;
+		var fh = 220;
+
+		var oy = 0;
+		var endy = -(sh); //adj for seamless handoff
+		timerone = setInterval(function () {
+			if (oy <= endy + (fh * 0)){ //adj for seamless handoff
+				clearInterval(timerone);
+				REALMILK100CHOCOLATE_seq02(); //immediately play sprite2 at end of sprite1
+			}
+			ss.style.top = oy + 'px';
+			oy -= fh;
+		}, 35);
+	}
+
+	function REALMILK100CHOCOLATE_seq02() {
+		//hide sprite 1 so image text does not overlap
+		document.getElementById('sprite1_holder').style.opacity = '0';
+		document.getElementById('sprite2_holder').style.opacity = '1';
+
+		//init sprite 2
+		var timertwo;
+		var ss = document.getElementById('sprite2');
+		var sh = 12760;
+		var fh = 220;
+
+		var oy = 0;
+		var endy = -(sh - (fh * 1));
+		timertwo = setInterval(function () {
+			if (oy <= endy + (fh * .5)){
+				clearInterval(timertwo);
+			}
+			ss.style.top = oy + 'px';
+			oy -= fh;
+		}, 35);
+	}
+
+
+	// ---- END  ------- //
+
+
+
+
+	// ---- START animation for HEALTHFUL ------- //
+
+	function HEALTHFUL_seq01() {
+		//init sprite 1
+		var timerone;
+		var ss = document.getElementById('sprite1');
+		var sh = 7800;
+		var fh = 300;
+
+		var oy = 0;
+		var endy = -(sh); //adj for seamless handoff
+		timerone = setInterval(function () {
+			if (oy <= endy + (fh * 0)){ //adj for seamless handoff
+				clearInterval(timerone);
+				HEALTHFUL_seq02(); //immediately play sprite2 at end of sprite1
+			}
+			ss.style.top = oy + 'px';
+			oy -= fh;
+		}, 35);
+	}
+
+	function HEALTHFUL_seq02() {
+		//hide sprite 1 so image text does not overlap
+		document.getElementById('sprite1_holder').style.opacity = '0';
+		document.getElementById('sprite2_holder').style.opacity = '1';
+
+		//init sprite 1
+		var timerone;
+		var ss = document.getElementById('sprite2');
+		var sh = 19500;
+		var fh = 300;
+
+		var oy = 0;
+		var endy = -(sh); //adj for seamless handoff
+		timerone = setInterval(function () {
+			if (oy <= endy + (fh * 0)){ //adj for seamless handoff
+				clearInterval(timerone);
+				HEALTHFUL_seq03();
+			}
+			ss.style.top = oy + 'px';
+			oy -= fh;
+		}, 35);
+	}
+
+	function HEALTHFUL_seq03() {
+		//hide sprite 1 so image text does not overlap
+		document.getElementById('sprite2_holder').style.opacity = '0';
+		document.getElementById('sprite3_holder').style.opacity = '1';
+
+		//init sprite 1
+		var timerone;
+		var ss = document.getElementById('sprite3');
+		var sh = 13800;
+		var fh = 300;
+
+		var oy = 0;
+		var endy = -(sh - (fh * 1));
+		timerone = setInterval(function () {
+			if (oy <= endy + (fh * .5)){
+				clearInterval(timerone);
+				setTimeout(function(){
+					HEALTHFUL_seq04(); //beat before next seq
+				}, 250);
+			}
+			ss.style.top = oy + 'px';
+			oy -= fh;
+		}, 35);
+	}
+
+	function HEALTHFUL_seq04() {
+		//hide sprite 1 so image text does not overlap
+		document.getElementById('sprite3_holder').style.opacity = '0';
+		document.getElementById('sprite4_holder').style.opacity = '1';
+
+		//init sprite 1
+		var timerone;
+		var ss = document.getElementById('sprite4');
+		var sh = 9300;
+		var fh = 300;
+
+		var oy = 0;
+		var endy = -(sh - (fh * 1));
+		timerone = setInterval(function () {
+			if (oy <= endy + (fh * .5)){
+				clearInterval(timerone);
+				setTimeout(function(){
+					HEALTHFUL_seq05(); //beat before next seq
+				}, 1000);
+			}
+			ss.style.top = oy + 'px';
+			oy -= fh;
+		}, 35);
+	}
+
+	function HEALTHFUL_seq05() {
+		//hide sprite 1 so image text does not overlap
+		document.getElementById('sprite4_holder').style.opacity = '0';
+		document.getElementById('sprite5_holder').style.opacity = '1';
+
+		//init sprite 2
+		var timertwo;
+		var ss = document.getElementById('sprite5');
+		var sh = 4800;
+		var fh = 300;
+
+		var oy = 0;
+		var endy = -(sh - (fh * 1));
+		timertwo = setInterval(function () {
+			if (oy <= endy + (fh * .5)){
+				clearInterval(timertwo);
+			}
+			ss.style.top = oy + 'px';
+			oy -= fh;
+		}, 35);
+	}
+
+	// ---- END  ------- //
+
+
+
+	// ---- START animation for HOLY COW ------- //
+
+	function HOLYCOW_seq01() {
+		//init sprite 1
+		var timerone;
+		var ss = document.getElementById('sprite1');
+		var sh = 14960;
+		var fh = 220;
+
+		var oy = 0;
+		var endy = -(sh); //adj for seamless handoff
+		timerone = setInterval(function () {
+			if (oy <= endy + (fh * 0)){ //adj for seamless handoff
+				clearInterval(timerone);
+				HOLYCOW_seq02(); //immediately play sprite2 at end of sprite1
+			}
+			ss.style.top = oy + 'px';
+			oy -= fh;
+		}, 35);
+	}
+
+	function HOLYCOW_seq02() {
+		//hide sprite 1 so image text does not overlap
+		document.getElementById('sprite1_holder').style.opacity = '0';
+		document.getElementById('sprite2_holder').style.opacity = '1';
+
+		//init sprite 2
+		var timertwo;
+		var ss = document.getElementById('sprite2');
+		var sh = 12760;
+		var fh = 220;
+
+		var oy = 0;
+		var endy = -(sh - (fh * 1));
+		timertwo = setInterval(function () {
+			if (oy <= endy + (fh * .5)){
+				clearInterval(timertwo);
+			}
+			ss.style.top = oy + 'px';
+			oy -= fh;
+		}, 35);
+	}
+
+
+	// ---- END ------- //
+
+
+
+	// ---- START animation for UDDERLY COCOA ------- //
+
+	function UDDERLYCOCOA_seq01() {
+		//init sprite 1
+		var timerone;
+		var ss = document.getElementById('sprite1');
+		var sh = 12240;
+		var fh = 180;
+
+		var oy = 0;
+		var endy = -(sh); //adj for seamless handoff
+		timerone = setInterval(function () {
+			if (oy <= endy + (fh * 0)){ //adj for seamless handoff
+				clearInterval(timerone);
+				UDDERLYCOCOA_seq02(); //immediately play sprite2 at end of sprite1
+			}
+			ss.style.top = oy + 'px';
+			oy -= fh;
+		}, 35);
+	}
+
+	function UDDERLYCOCOA_seq02() {
+		//hide sprite 1 so image text does not overlap
+		document.getElementById('sprite1_holder').style.opacity = '0';
+		document.getElementById('sprite2_holder').style.opacity = '1';
+
+		//init sprite 2
+		var timertwo;
+		var ss = document.getElementById('sprite2');
+		var sh = 14580;
+		var fh = 180;
+
+		var oy = 0;
+		var endy = -(sh - (fh * 1));
+		timertwo = setInterval(function () {
+			if (oy <= endy + (fh * .5)){
+				clearInterval(timertwo);
+			}
+			ss.style.top = oy + 'px';
+			oy -= fh;
+		}, 35);
+	}
+
+
+	// ---- END ------- //
+
+
+
+	// ---- START animation for UDDERLY COOKIE ------- //
+
+	function UDDERLYCOOKIE_seq01() {
+		//init sprite 1
+		var timerone;
+		var ss = document.getElementById('sprite1');
+		var sh = 10260;
+		var fh = 180;
+
+		var oy = 0;
+		var endy = -(sh); //adj for seamless handoff
+		timerone = setInterval(function () {
+			if (oy <= endy + (fh * 0)){ //adj for seamless handoff
+				clearInterval(timerone);
+				UDDERLYCOOKIE_seq02(); //immediately play sprite2 at end of sprite1
+			}
+			ss.style.top = oy + 'px';
+			oy -= fh;
+		}, 35);
+	}
+
+	function UDDERLYCOOKIE_seq02() {
+		//hide sprite 1 so image text does not overlap
+		document.getElementById('sprite1_holder').style.opacity = '0';
+		document.getElementById('sprite2_holder').style.opacity = '1';
+		document.getElementById('sprite3_holder').style.opacity = '0';
+
+		//init sprite 1
+		var timertwo;
+		var ss = document.getElementById('sprite2');
+		var sh = 12600;
+		var fh = 180;
+
+		var oy = 0;
+		var endy = -(sh); //adj for seamless handoff
+		timertwo = setInterval(function () {
+			if (oy <= endy + (fh * 0)){ //adj for seamless handoff
+				clearInterval(timertwo);
+				UDDERLYCOOKIE_seq03(); //immediately play sprite2 at end of sprite1
+			}
+			ss.style.top = oy + 'px';
+			oy -= fh;
+		}, 35);
+	}
+
+	function UDDERLYCOOKIE_seq03() {
+		//hide sprite 2 so image text does not overlap
+		document.getElementById('sprite1_holder').style.opacity = '0';
+		document.getElementById('sprite2_holder').style.opacity = '0';
+		document.getElementById('sprite3_holder').style.opacity = '1';
+
+		//init sprite 3
+		var timerthree;
+		var ss = document.getElementById('sprite3');
+		var sh = 11880;
+		var fh = 180;
+
+		var oy = 0;
+		var endy = -(sh - (fh * 1));
+		timerthree = setInterval(function () {
+			if (oy <= endy + (fh * .5)){
+				clearInterval(timerthree);
+			}
+			ss.style.top = oy + 'px';
+			oy -= fh;
+		}, 35);
+	}
+
+	// ---- END ------- //
+
+
+
+	// ---- START animation for UDDERLY SMOOTHIE ------- //
+
+	function UDDERLYSMOOTHIE_seq01() {
+		//init sprite 1
+		var timerone;
+		var ss = document.getElementById('sprite1');
+		var sh = 12240;
+		var fh = 180;
+
+		var oy = 0;
+		var endy = -(sh); //adj for seamless handoff
+		timerone = setInterval(function () {
+			if (oy <= endy + (fh * 0)){ //adj for seamless handoff
+				clearInterval(timerone);
+				UDDERLYSMOOTHIE_seq02(); //immediately play sprite2 at end of sprite1
+			}
+			ss.style.top = oy + 'px';
+			oy -= fh;
+		}, 35);
+	}
+
+	function UDDERLYSMOOTHIE_seq02() {
+		//hide sprite 1 so image text does not overlap
+		document.getElementById('sprite1_holder').style.opacity = '0';
+		document.getElementById('sprite2_holder').style.opacity = '1';
+
+		//init sprite 2
+		var timertwo;
+		var ss = document.getElementById('sprite2');
+		var sh = 14580;
+		var fh = 180;
+
+		var oy = 0;
+		var endy = -(sh - (fh * 1));
+		timertwo = setInterval(function () {
+			if (oy <= endy + (fh * .5)){
+				clearInterval(timertwo);
+			}
+			ss.style.top = oy + 'px';
+			oy -= fh;
+		}, 35);
+	}
+
+	// ---- END ------- //
+
+
+
+	// ---- START animation for UDDERLY ------- //
+
+	function UDDERLY_seq01() {
+		//init sprite 1
+		var timerone;
+		var ss = document.getElementById('sprite1');
+		var sh = 12240;
+		var fh = 180;
+
+		var oy = 0;
+		var endy = -(sh); //adj for seamless handoff
+		timerone = setInterval(function () {
+			if (oy <= endy + (fh * 0)){ //adj for seamless handoff
+				clearInterval(timerone);
+				UDDERLY_seq02(); //immediately play sprite2 at end of sprite1
+			}
+			ss.style.top = oy + 'px';
+			oy -= fh;
+		}, 35);
+	}
+
+	function UDDERLY_seq02() {
+		//hide sprite 1 so image text does not overlap
+		document.getElementById('sprite1_holder').style.opacity = '0';
+		document.getElementById('sprite2_holder').style.opacity = '1';
+
+		//init sprite 2
+		var timertwo;
+		var ss = document.getElementById('sprite2');
+		var sh = 14580;
+		var fh = 180;
+
+		var oy = 0;
+		var endy = -(sh - (fh * 1));
+		timertwo = setInterval(function () {
+			if (oy <= endy + (fh * .5)){
+				clearInterval(timertwo);
+			}
+			ss.style.top = oy + 'px';
+			oy -= fh;
+		}, 35);
+	}
+
+	// ---- END ------- //
+
+
+
+	// ---- START animation for GET COOKIN' A ------ //
+
+	function GETCOOKINa_seq01() {
+		//init sprite 1
+		var timerone;
+		var ss = document.getElementById('sprite1');
+		var sh = 24130;
+		var fh = 190;
+
+		var oy = 0;
+		var endy = -(sh); //adj for seamless handoff
+		timerone = setInterval(function () {
+			if (oy <= endy + (fh * 0)){ //adj for seamless handoff
+				clearInterval(timerone);
+				GETCOOKINa_seq02(); //immediately play sprite2 at end of sprite1
+			}
+			ss.style.top = oy + 'px';
+			oy -= fh;
+		}, 35);
+	}
+
+	function GETCOOKINa_seq02() {
+		//hide sprite 1 so image text does not overlap
+		document.getElementById('sprite1_holder').style.opacity = '0';
+		document.getElementById('sprite2_holder').style.opacity = '1';
+
+		//init sprite 2
+		var timertwo;
+		var ss = document.getElementById('sprite2');
+		var sh = 13490;
+		var fh = 190;
+
+		var oy = 0;
+		var endy = -(sh - (fh * 1));
+		timertwo = setInterval(function () {
+			if (oy <= endy + (fh * .5)){
+				clearInterval(timertwo);
+			}
+			ss.style.top = oy + 'px';
+			oy -= fh;
+		}, 35);
+	}
+
+
+	// ---- END ------- //
+
+	
+
+	// ---- START animation for GET COOKIN' B ------ //
+
+	function GETCOOKINb_seq01() {
+		//init sprite 1
+		var timerone;
+		var ss = document.getElementById('sprite1');
+		var sh = 10830;
+		var fh = 190;
+
+		var oy = 0;
+		var endy = -(sh); //adj for seamless handoff
+		timerone = setInterval(function () {
+			if (oy <= endy + (fh * 0)){ //adj for seamless handoff
+				clearInterval(timerone);
+				GETCOOKINb_seq02(); //immediately play sprite2 at end of sprite1
+			}
+			ss.style.top = oy + 'px';
+			oy -= fh;
+		}, 35);
+	}
+
+	function GETCOOKINb_seq02() {
+		//hide sprite 1 so image text does not overlap
+		document.getElementById('sprite1_holder').style.opacity = '0';
+		document.getElementById('sprite2_holder').style.opacity = '1';
+
+		//init sprite 2
+		var timertwo;
+		var ss = document.getElementById('sprite2');
+		var sh = 13300;
+		var fh = 190;
+
+		var oy = 0;
+		var endy = -(sh - (fh * 1));
+		timertwo = setInterval(function () {
+			if (oy <= endy + (fh * .5)){
+				clearInterval(timertwo);
+			}
+			ss.style.top = oy + 'px';
+			oy -= fh;
+		}, 35);
+	}
+
+
+	// ---- END ------- //
+
+
+	// ---- START animation for SCOOP ------- //
+
+	function SCOOP_seq01() {
+		//init sprite 1
+		var timerone;
+		var ss = document.getElementById('sprite1');
+		var sh = 8960;
+		var fh = 320;
+
+		var oy = 0;
+		var endy = -(sh); //adj for seamless handoff
+		timerone = setInterval(function () {
+			if (oy <= endy + (fh * 0)){ //adj for seamless handoff
+				clearInterval(timerone);
+				SCOOP_seq02(); //immediately play sprite2 at end of sprite1
+			}
+			ss.style.top = oy + 'px';
+			oy -= fh;
+		}, 35);
+	}
+
+	function SCOOP_seq02() {
+		//hide sprite 1 so image text does not overlap
+		document.getElementById('sprite1_holder').style.opacity = '0';
+		document.getElementById('sprite2_holder').style.opacity = '1';
+
+		//init sprite 1
+		var timerone;
+		var ss = document.getElementById('sprite2');
+		var sh = 24960;
+		var fh = 320;
+
+		var oy = 0;
+		var endy = -(sh - (fh * 1));
+		timerone = setInterval(function () {
+			if (oy <= endy + (fh * .5)){
+				clearInterval(timerone);
+				setTimeout(function(){
+					SCOOP_seq03(); //beat before next seq
+				}, 250);
+			}
+			ss.style.top = oy + 'px';
+			oy -= fh;
+		}, 35);
+	}
+
+	function SCOOP_seq03() {
+		//hide sprite 1 so image text does not overlap
+		document.getElementById('sprite2_holder').style.opacity = '0';
+		document.getElementById('sprite3_holder').style.opacity = '1';
+
+		//init sprite 1
+		var timerone;
+		var ss = document.getElementById('sprite3');
+		var sh = 7360;
+		var fh = 320;
+
+		var oy = 0;
+		var endy = -(sh - (fh * 1));
+		timerone = setInterval(function () {
+			if (oy <= endy + (fh * .5)){
+				clearInterval(timerone);
+				setTimeout(function(){
+					SCOOP_seq04(); //beat before next seq
+				}, 1000);
+			}
+			ss.style.top = oy + 'px';
+			oy -= fh;
+		}, 35);
+	}
+
+	function SCOOP_seq04() {
+		//hide sprite 1 so image text does not overlap
+		document.getElementById('sprite3_holder').style.opacity = '0';
+		document.getElementById('sprite4_holder').style.opacity = '1';
+
+		//init sprite 1
+		var timerone;
+		var ss = document.getElementById('sprite4');
+		var sh = 8960;
+		var fh = 320;
+
+		var oy = 0;
+		var endy = -(sh - (fh * 1));
+		timerone = setInterval(function () {
+			if (oy <= endy + (fh * .5)){
+				clearInterval(timerone);
+			}
+			ss.style.top = oy + 'px';
+			oy -= fh;
+		}, 35);
+	}
+
+	// ---- END ------- //
+
+
+	// ---- START animation for MORE CALCIUM ------ //
+
+	function MORECALCIUM_seq01() {
+		//init sprite 1
+		var timerone;
+		var ss = document.getElementById('sprite1');
+		var sh = 13140;
+		var fh = 180;
+
+		var oy = 0;
+		var endy = -(sh); //adj for seamless handoff
+		timerone = setInterval(function () {
+			if (oy <= endy + (fh * 0)){ //adj for seamless handoff
+				clearInterval(timerone);
+				MORECALCIUM_seq02(); //immediately play sprite2 at end of sprite1
+			}
+			ss.style.top = oy + 'px';
+			oy -= fh;
+		}, 35);
+	}
+
+	function MORECALCIUM_seq02() {
+		//hide sprite 1 so image text does not overlap
+		document.getElementById('sprite1_holder').style.opacity = '0';
+		document.getElementById('sprite2_holder').style.opacity = '1';
+
+		//init sprite 2
+		var timertwo;
+		var ss = document.getElementById('sprite2');
+		var sh = 9720;
+		var fh = 180;
+
+		var oy = 0;
+		var endy = -(sh - (fh * 1));
+		timertwo = setInterval(function () {
+			if (oy <= endy + (fh * .5)){
+				clearInterval(timertwo);
+			}
+			ss.style.top = oy + 'px';
+			oy -= fh;
+		}, 35);
+	}
+
+
+	// ---- END ------- //
+
+
+
+	// ---- START animation for EVEN MORE YUM ------ //
+
+	function EVENMOREYUM_seq01() {
+		//init sprite 1
+		var timerone;
+		var ss = document.getElementById('sprite1');
+		var sh = 19600;
+		var fh = 400;
+
+		var oy = 0;
+		var endy = -(sh); //adj for seamless handoff
+		timerone = setInterval(function () {
+			if (oy <= endy + (fh * 0)){ //adj for seamless handoff
+				clearInterval(timerone);
+				EVENMOREYUM_seq02(); //immediately play sprite2 at end of sprite1
+			}
+			ss.style.top = oy + 'px';
+			oy -= fh;
+		}, 35);
+	}
+
+	function EVENMOREYUM_seq02() {
+		//hide sprite 1 so image text does not overlap
+		document.getElementById('sprite1_holder').style.opacity = '0';
+		document.getElementById('sprite2_holder').style.opacity = '1';
+
+		//init sprite 1
+		var timerone;
+		var ss = document.getElementById('sprite2');
+		var sh = 10400;
+		var fh = 400;
+
+		var oy = 0;
+		var endy = -(sh); //adj for seamless handoff
+		timerone = setInterval(function () {
+			if (oy <= endy + (fh * 0)){ //adj for seamless handoff
+				clearInterval(timerone);
+				EVENMOREYUM_seq03();
+			}
+			ss.style.top = oy + 'px';
+			oy -= fh;
+		}, 35);
+	}
+
+	function EVENMOREYUM_seq03() {
+		//hide sprite 1 so image text does not overlap
+		document.getElementById('sprite2_holder').style.opacity = '0';
+		document.getElementById('sprite3_holder').style.opacity = '1';
+
+		//init sprite 1
+		var timerone;
+		var ss = document.getElementById('sprite3');
+		var sh = 7200;
+		var fh = 400;
+
+		var oy = 0;
+		var endy = -(sh - (fh * 1));
+		timerone = setInterval(function () {
+			if (oy <= endy + (fh * .5)){
+				clearInterval(timerone);
+				setTimeout(function(){
+					EVENMOREYUM_seq04(); //beat before next seq
+				}, 250);
+			}
+			ss.style.top = oy + 'px';
+			oy -= fh;
+		}, 35);
+	}
+
+	function EVENMOREYUM_seq04() {
+		//hide sprite 1 so image text does not overlap
+		document.getElementById('sprite3_holder').style.opacity = '0';
+		document.getElementById('sprite4_holder').style.opacity = '1';
+
+		//init sprite 1
+		var timerone;
+		var ss = document.getElementById('sprite4');
+		var sh = 3200;
+		var fh = 400;
+
+		var oy = 0;
+		var endy = -(sh - (fh * 1));
+		timerone = setInterval(function () {
+			if (oy <= endy + (fh * .5)){
+				clearInterval(timerone);
+				setTimeout(function(){
+					EVENMOREYUM_seq05(); //beat before next seq
+				}, 1000);
+			}
+			ss.style.top = oy + 'px';
+			oy -= fh;
+		}, 35);
+	}
+
+	function EVENMOREYUM_seq05() {
+		//hide sprite 1 so image text does not overlap
+		document.getElementById('sprite4_holder').style.opacity = '0';
+		document.getElementById('sprite5_holder').style.opacity = '1';
+
+		//init sprite 2
+		var timertwo;
+		var ss = document.getElementById('sprite5');
+		var sh = 7200;
+		var fh = 400;
+
+		var oy = 0;
+		var endy = -(sh - (fh * 1));
+		timertwo = setInterval(function () {
+			if (oy <= endy + (fh * .5)){
+				clearInterval(timertwo);
+			}
+			ss.style.top = oy + 'px';
+			oy -= fh;
+		}, 35);
+	}
+
+
+	// ---- END ------- //
+
+
+	// ---- START animation for CHECKOUT ------ //
+
+	function CHECKOUT_seq01() {
+		//init sprite 1
+		var timerone;
+		var ss = document.getElementById('sprite1');
+		var sh = 8160;
+		var fh = 160;
+
+		var oy = 0;
+		var endy = -(sh - (fh * 1));
+		timerone = setInterval(function () {
+			if (oy <= endy + (fh * .5)){
+				clearInterval(timerone);
+			}
+			ss.style.top = oy + 'px';
+			oy -= fh;
+		}, 35);
+	}
+
+
+	// ---- END ------- //
+
+
+
+
+
+
+	function preloadimages(arr){
+			var newimages=[], loadedimages=0
+			var postaction=function(){}
+			var arr=(typeof arr!="object")? [arr] : arr
+			function imageloadpost(){
+					loadedimages++
+					if (loadedimages==arr.length){
+							postaction(newimages) //call postaction and pass in newimages array as parameter
+					}
+			}
+			for (var i=0; i<arr.length; i++){
+					newimages[i]=new Image()
+					newimages[i].src=arr[i]
+					newimages[i].onload=function(){
+							imageloadpost()
+					}
+					newimages[i].onerror=function(){
+							imageloadpost()
+					}
+			}
+			return { //return blank object with done() method
+					done:function(f){
+							postaction=f || postaction //remember user defined callback functions to be called when images load
+					}
+			}
+	}
+
+	var preloadassets = [
+		global_asset_bg,
+		global_asset_sprite1,
+		global_asset_sprite2,
+		global_asset_sprite3,
+		global_asset_sprite4,
+		global_asset_sprite5,
+		global_asset_resolve_img
+	];
+
+
+} ) ();

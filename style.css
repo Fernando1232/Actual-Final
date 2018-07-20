@@ -1,20 +1,60 @@
-html {
-  box-sizing: border-box;
+body {
+    background-color: lightsteelblue;
 }
 
-*, *:before, *:after {
-  box-sizing: inherit;
+h1 {
+    font-size: 50px;
+    text-align: center;   
 }
 
 body {
-  text-align: center;
+    height: 100%;
 }
 
-/* Add your styles below */
+.parallax {
+    background-image: url(dust.jpeg);
+    height: 100%; 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:1000px;
+    background-color: white;
+    font-size:35px;
+}
 
-#p5-canvas {
-  margin: 10px auto;
-  width: 810px;
-  height: 610px;
-  border: 5px solid red;
+p {
+    font-size: 40px;
+    text-align: center;
+}
+
+h2{
+    font-size:30px;
+    text-align: center;
+}
+
+li {
+    font-size: 20px;
+    text-overflow: clip;
+}
+
+#creation {
+    font-size: 25px;
+}
+
+#problem {
+    font-size: 25px;
+}
+
+h3{
+    font-size: 30px;
+    text-align: center;
+}
+
+#fern{
+    align-content: center;
+}
+
+ul {
+    list-style-position: inside;
 }
